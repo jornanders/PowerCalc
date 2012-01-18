@@ -10,6 +10,7 @@
     <module>domain</module>
   </modules>
 
+  
   	<properties>
 		<spring.version>3.1.0.RELEASE</spring.version>
 	</properties>
