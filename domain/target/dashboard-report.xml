@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><MavenProject projectName="domain" artifactId="domain" groupId="no.jascorp.powercalc" version="1.0-SNAPSHOT">
+  <id>0</id>
+  <modules/>
+  <reports>
+    <org.codehaus.mojo.dashboard.report.plugin.beans.CoberturaReportBean>
+      <nbClasses>19</nbClasses>
+      <lineCoverRate>0.9655172413793104</lineCoverRate>
+      <branchCoverRate>0.9393939393939394</branchCoverRate>
+      <numberOfCoveredBranches>124</numberOfCoveredBranches>
+      <numberOfCoveredLines>308</numberOfCoveredLines>
+      <numberOfValidBranches>132</numberOfValidBranches>
+      <numberOfValidLines>319</numberOfValidLines>
+      <dateGeneration>2012-01-18 23:17:32.95 CET</dateGeneration>
+      <id>0</id>
+    </org.codehaus.mojo.dashboard.report.plugin.beans.CoberturaReportBean>
+    <org.codehaus.mojo.dashboard.report.plugin.beans.SurefireReportBean>
+      <nbTests>69</nbTests>
+      <nbErrors>0</nbErrors>
+      <nbFailures>0</nbFailures>
+      <nbSkipped>0</nbSkipped>
+      <sucessRate>100.0</sucessRate>
+      <elapsedTime>28.254</elapsedTime>
+      <dateGeneration>2012-01-18 23:17:32.95 CET</dateGeneration>
+      <id>0</id>
+    </org.codehaus.mojo.dashboard.report.plugin.beans.SurefireReportBean>
+  </reports>
+</MavenProject>

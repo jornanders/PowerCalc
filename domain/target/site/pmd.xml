@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.5" timestamp="2012-01-18T23:17:36.522">
+<file name="C:\PROSJEKTER\PowerCalculator\source\domain\src\main\java\no\jascorp\powercalc\domain\maaleavlesning\Maaleavlesninger.java">
+<violation beginline="49" endline="51" begincolumn="33" endcolumn="33" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="no.jascorp.powercalc.domain.maaleavlesning" class="Maaleavlesninger" method="assureStandIsIncreasing" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
+</violation>
+</file>
+</pmd>
