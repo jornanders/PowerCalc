@@ -19,6 +19,8 @@ public class TestAvregning {
 	
 	@Test
 	public void testAvregningDesember2011() throws Exception {
+		System.out.println("hei");
+		
 		Regning regning = new Regning("01.12.2011", "01.01.2012");
 		regning.addRegningLinje(new RegningLinje(Avsender.LIER_EVERK, 1365.80));
 		regning.addRegningLinje(new RegningLinje(Avsender.LIER_EVERK, 98.18/2));
