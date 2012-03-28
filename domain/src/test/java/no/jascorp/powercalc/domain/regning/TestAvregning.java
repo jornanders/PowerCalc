@@ -18,6 +18,45 @@ public class TestAvregning {
 	}
 	
 	@Test
+	public void testAvregningFebruar2012() throws Exception {
+		Regning regning = new Regning("01.02.2012", "01.03.2012");
+		regning.addRegningLinje(new RegningLinje(Avsender.LIER_EVERK, 1771.72));
+		regning.addRegningLinje(new RegningLinje(Avsender.LIER_EVERK, 96.31/2));
+		regning.addRegningLinje(new RegningLinje(Avsender.EB, 1705.82));
+		
+		Maaleavlesninger avlesninger = new Maaleavlesninger();
+		avlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HYBELMAALER, "18.01.2012", 29614));
+		avlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HYBELMAALER, "25.03.2012", 31183));
+		
+		avlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HOVEDMAALER, "01.02.2012", 95007));
+		avlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HOVEDMAALER, "01.03.2012", 98898));
+		
+		Avregning avregning = new Avregning(regning, avlesninger);
+		assertEquals(615.36, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+		assertEquals(regning.getSum() - 615.36, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+	}
+
+	@Test
+	public void testAvregningJanuar2012() throws Exception {
+		Regning regning = new Regning("01.01.2012", "01.02.2012");
+		regning.addRegningLinje(new RegningLinje(Avsender.LIER_EVERK, 1396.36));
+		regning.addRegningLinje(new RegningLinje(Avsender.LIER_EVERK, 96.31/2));
+		regning.addRegningLinje(new RegningLinje(Avsender.EB, 1715.98));
+		
+		Maaleavlesninger avlesninger = new Maaleavlesninger();
+		avlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HYBELMAALER, "07.12.2011", 28542));
+		avlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HYBELMAALER, "18.01.2012", 29614));
+		avlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HYBELMAALER, "25.03.2012", 31183));
+		
+		avlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HOVEDMAALER, "01.01.2012", 91106));
+		avlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HOVEDMAALER, "01.02.2012", 95007));
+		
+		Avregning avregning = new Avregning(regning, avlesninger);
+		assertEquals(617.16, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+		assertEquals(regning.getSum() - 617.16, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+	}
+
+	@Test
 	public void testAvregningDesember2011() throws Exception {
 		Regning regning = new Regning("01.12.2011", "01.01.2012");
 		regning.addRegningLinje(new RegningLinje(Avsender.LIER_EVERK, 1365.80));
