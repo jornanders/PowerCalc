@@ -15,6 +15,7 @@
 
 	<properties>
 		<spring.version>3.1.0.RELEASE</spring.version>
+		<jetty.version>8.0.3.v20111011</jetty.version>
 	</properties>
 
 	<dependencies>
