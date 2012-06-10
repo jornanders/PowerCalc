@@ -67,7 +67,7 @@ class MaaleavlesningIntervall {
 			|| getAvlesningDatointervall().isDateInRange(intervalToCalculate.getTilDato()) ? intervalToCalculate.getTilDato() : getAvlesningDatointervall().getTilDato();
 		intervalToCalculate = new Datointervall(fraDato, tilDato);
 		double forbruk = ((double)fraAvlesning.getForbruk(tilAvlesning) / avlesningIntervall.getAntallDagerForIntervall()) * (intervalToCalculate.getAntallDagerForIntervall());
-		logger.debug("getForbruk: " + fraAvlesning.getForbruk(tilAvlesning) + " / " + avlesningIntervall.getAntallDagerForIntervall() + " * " + intervalToCalculate + " = " + forbruk);
+		logger.debug("getForbruk: " + fraAvlesning.getForbruk(tilAvlesning) + " / " + avlesningIntervall.getAntallDagerForIntervall() + " * " + intervalToCalculate + " : kWh " + forbruk);
 		return forbruk;
 	}
 	

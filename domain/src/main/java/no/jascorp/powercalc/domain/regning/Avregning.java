@@ -25,13 +25,13 @@ public class Avregning {
 	
 	public double beregnSum(Maalepunkt maalepunkt) {
 		double sum = regning.getSum() * beregnProsentandel(maalepunkt);
-		Logger.getLogger(getClass()).debug("Sum " + maalepunkt + " " + regning.getIntervall() + ": " + sum);
+		Logger.getLogger(getClass()).debug("Sum " + maalepunkt + " " + regning.getIntervall() + ": NOK " + sum);
 		return sum;
 	}
 
 	public double beregnForbruk(Maalepunkt maalepunkt) {
 		double forbruk = maalepunkt.beregnForbruk(avlesninger, regning.getIntervall());
-		Logger.getLogger(getClass()).debug("Forbruk " + maalepunkt + ": " + forbruk);
+		Logger.getLogger(getClass()).debug("Forbruk " + maalepunkt + ": kWh " + forbruk);
 		return forbruk;
 	}
 }

@@ -61,7 +61,7 @@ public class Maaleavlesninger {
 			forbruk += intervaller.getForbruk(datointervall);
 			intervaller = intervaller.getNesteIntervall();
 		}
-		Logger.getLogger(getClass()).debug("Totalt forbruk for, " + maalepunkt + ", intervall (" + datointervall + ") : " + forbruk);
+		Logger.getLogger(getClass()).debug("Totalt forbruk for, " + maalepunkt + ", intervall (" + datointervall + ") : kWh " + forbruk);
 		return forbruk;
 	}
 	
