@@ -16,7 +16,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
- * @author Jørn Anders Svendsen
+ * @author JÃ¸rn Anders Svendsen
  */
 @Entity
 @Access(AccessType.FIELD)

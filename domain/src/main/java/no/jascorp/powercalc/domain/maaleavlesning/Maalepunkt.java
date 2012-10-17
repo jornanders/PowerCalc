@@ -3,7 +3,8 @@ package no.jascorp.powercalc.domain.maaleavlesning;
 import no.jascorp.powercalc.domain.common.Datointervall;
 
 /**
- * @author Jørn Anders Svendsen
+ * @author JÃ¸rn Anders Svendsen
+ *
  */
 public enum Maalepunkt {
 	

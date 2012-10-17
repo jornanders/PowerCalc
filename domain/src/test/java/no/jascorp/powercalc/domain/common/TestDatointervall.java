@@ -10,7 +10,8 @@ import static org.junit.Assert.*;
 import static junitx.framework.Assert.assertNotEquals;
 
 /**
- * @author Jørn Anders Svendsen
+ * @author JÃ¸rn Anders Svendsen
+ *
  */
 public class TestDatointervall extends EqualsHashCodeTestCase{
 

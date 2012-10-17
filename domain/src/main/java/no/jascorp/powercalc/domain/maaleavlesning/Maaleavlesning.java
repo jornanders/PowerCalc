@@ -20,7 +20,8 @@ import no.jascorp.powercalc.util.Utils;
 import org.hibernate.annotations.Immutable;
 
 /**
- * @author Jørn Anders Svendsen
+ * @author JÃ¸rn Anders Svendsen
+ *
  */
 @Entity()
 @Immutable
@@ -55,7 +56,7 @@ public class Maaleavlesning implements Comparable<Maaleavlesning>, Serializable 
 	}
 
 	public Maaleavlesning(Maalepunkt punkt, Date dato, int stand) {
-		Utils.assertNotNull(punkt, "Målepunkt kan ikke være null");
+		Utils.assertNotNull(punkt, "MÃ¥lepunkt kan ikke vÃ¦re null");
 		this.punkt = punkt;
 		this.dato = new Date(dato.getTime());
 		this.stand = stand;
@@ -99,7 +100,7 @@ public class Maaleavlesning implements Comparable<Maaleavlesning>, Serializable 
 	@Override
 	public int compareTo(Maaleavlesning o) {
 		if (o.getDato().equals(this.getDato())) {
-			throw new IllegalArgumentException("Måling for " + this.getDato() + ", " + this.getPunkt() + " er allerede registrert");
+			throw new IllegalArgumentException("MÃ¥ling for " + this.getDato() + ", " + this.getPunkt() + " er allerede registrert");
 		}
 		return o.getDato().before(this.getDato()) ? 1 : -1;
 	}

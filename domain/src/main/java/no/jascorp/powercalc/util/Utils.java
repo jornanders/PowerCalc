@@ -5,7 +5,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @author Jørn Anders Svendsen
+ * @author JÃ¸rn Anders Svendsen
+ *
  */
 public class Utils {
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");

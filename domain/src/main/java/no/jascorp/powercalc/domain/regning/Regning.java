@@ -18,7 +18,7 @@ import no.jascorp.powercalc.domain.common.Datointervall;
 import no.jascorp.powercalc.util.Utils;
 
 /**
- * @author Jørn Anders Svendsen
+ * @author JÃ¸rn Anders Svendsen
  */
 @Entity
 @Access(AccessType.FIELD)

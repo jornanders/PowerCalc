@@ -9,7 +9,8 @@ import no.jascorp.powercalc.domain.maaleavlesning.Maalepunkt;
 import org.junit.Test;
 
 /**
- * @author Jørn Anders Svendsen
+ * @author JÃ¸rn Anders Svendsen
+ *
  */
 public class TestMaaleavlesninger {
 	

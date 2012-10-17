@@ -8,7 +8,8 @@ import no.jascorp.powercalc.domain.regning.Regning;
 import no.jascorp.powercalc.repository.RegningRepository;
 
 /**
- * @author Jørn Anders Svendsen
+ * @author JÃ¸rn Anders Svendsen
+ *
  */
 @Repository
 public class HibernateRegningRepository implements RegningRepository {

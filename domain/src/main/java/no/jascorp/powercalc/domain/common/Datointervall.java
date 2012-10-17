@@ -13,7 +13,7 @@ import javax.persistence.TemporalType;
 import no.jascorp.powercalc.util.Utils;
 
 /**
- * @author Jørn Anders Svendsen
+ * @author JÃ¸rn Anders Svendsen
  */
 @Embeddable
 public class Datointervall {
@@ -33,10 +33,10 @@ public class Datointervall {
 
 	public Datointervall(Date fraDato, Date tilDato) {
 		if (fraDato == null || tilDato == null) {
-			throw new IllegalArgumentException("Dato kan ikke være null");
+			throw new IllegalArgumentException("Dato kan ikke vÃ¦re null");
 		}
 		if (!tilDato.equals(fraDato) && tilDato.before(fraDato)) {
-			throw new IllegalArgumentException("Fra-dato må være før til-dato");
+			throw new IllegalArgumentException("Fra-dato mÃ¥ vÃ¦re fÃ¸r til-dato");
 		}
 		this.fraDato = new Date(fraDato.getTime());
 		this.tilDato = new Date(tilDato.getTime());

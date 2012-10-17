@@ -8,7 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author Jørn Anders Svendsen
+ * @author JÃ¸rn Anders Svendsen
  */
 class MaaleavlesningIntervall {
 	private final Maaleavlesning fraAvlesning;

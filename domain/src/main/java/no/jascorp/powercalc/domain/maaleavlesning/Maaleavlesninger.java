@@ -10,7 +10,8 @@ import no.jascorp.powercalc.domain.common.Datointervall;
 import org.apache.log4j.Logger;
 
 /**
- * @author Jørn Anders Svendsen
+ * @author JÃ¸rn Anders Svendsen
+ *
  */
 public class Maaleavlesninger {
 	private HashMap<Maalepunkt, LinkedList<Maaleavlesning>> maaleavlesninger = new HashMap<Maalepunkt, LinkedList<Maaleavlesning>>();
@@ -26,7 +27,7 @@ public class Maaleavlesninger {
 
 	public void addMaaleavlesning(Maaleavlesning maaleavlesning) {
 		if (maaleavlesning == null) {
-			throw new IllegalArgumentException("Måleavlesning kan ikke være null");
+			throw new IllegalArgumentException("MÃ¥leavlesning kan ikke vÃ¦re null");
 		}
 		
 		LinkedList<Maaleavlesning> avlesninger = getAvlesningerForMaalepunkt(maaleavlesning.getPunkt());
@@ -79,7 +80,7 @@ public class Maaleavlesninger {
 
 	public MaaleavlesningIntervall getIntervaller(Datointervall datointervall, Maalepunkt maalepunkt) {
 		MaaleavlesningIntervall intervaller = getIntervaller(maalepunkt);
-		//sjekker om datointervallet ligger før hele kjeden med avlesningsintervall => bruker det første intervallet for hele beregningen
+		//sjekker om datointervallet ligger fÃ¸r hele kjeden med avlesningsintervall => bruker det fÃ¸rste intervallet for hele beregningen
 		if (isTilDatoForDatointervallBeforeForsteAvlesning(datointervall, intervaller)) {
 			intervaller.setNesteIntervall(null);
 			return intervaller;
@@ -94,7 +95,7 @@ public class Maaleavlesninger {
 		MaaleavlesningIntervall subIntervaller = intervaller;
 		//finner start-intervallet
 		while (subIntervaller != null 
-				&& !datointervall.getFraDato().before(subIntervaller.getAvlesningDatointervall().getFraDato()) //at fra dato ligger får første måling
+				&& !datointervall.getFraDato().before(subIntervaller.getAvlesningDatointervall().getFraDato()) //at fra dato ligger fÃ¸r fÃ¸rste mÃ¥ling
 				&& !subIntervaller.getAvlesningDatointervall().isDateInRange(datointervall.getFraDato())) {
 			subIntervaller = subIntervaller.getNesteIntervall();
 			subIntervaller.setForrigeIntervall(null);
@@ -107,7 +108,7 @@ public class Maaleavlesninger {
 		MaaleavlesningIntervall sisteIntervall = subIntervaller.getSisteIntervall();
 		//finner slutt-intervallet
 		while (sisteIntervall.getForrigeIntervall() != null
-				&& !datointervall.getTilDato().after(sisteIntervall.getAvlesningDatointervall().getTilDato()) //at til dato ligger etter siste måling
+				&& !datointervall.getTilDato().after(sisteIntervall.getAvlesningDatointervall().getTilDato()) //at til dato ligger etter siste mÃ¥ling
 				&& !sisteIntervall.getAvlesningDatointervall().isDateInRange(datointervall.getTilDato())) {
 			sisteIntervall = sisteIntervall.getForrigeIntervall();
 		}

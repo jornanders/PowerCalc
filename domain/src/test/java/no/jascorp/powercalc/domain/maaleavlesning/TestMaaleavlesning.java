@@ -13,7 +13,7 @@ import no.jascorp.powercalc.domain.common.EqualsHashCodeTestCase;
 import org.junit.Test;
 
 /**
- * @author Jørn Anders Svendsen
+ * @author JÃ¸rn Anders Svendsen
  *
  */
 public class TestMaaleavlesning extends EqualsHashCodeTestCase {

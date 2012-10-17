@@ -6,7 +6,8 @@ import no.jascorp.powercalc.domain.maaleavlesning.Maalepunkt;
 import org.apache.log4j.Logger;
 
 /**
- * @author Jørn Anders Svendsen
+ * @author JÃ¸rn Anders Svendsen
+ *
  */
 public class Avregning {
 	private final Regning regning;
