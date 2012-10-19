@@ -30,7 +30,7 @@ public class TestHibernateRegningRepository extends AbstractDatabaseTest {
 		regning.addRegningLinje(new RegningLinje(Avsender.EB, 223.34));
 		regning.addRegningLinje(new RegningLinje(Avsender.EB, 100.00));
 		regning.addRegningLinje(new RegningLinje(Avsender.LIER_EVERK, 100.00));
-		repository.save(regning);
+		regning = repository.save(regning);
 		assertTrue(regning.getRegningId() > 0);
 		
 		Regning regningGet = repository.findOne(regning.getRegningId());

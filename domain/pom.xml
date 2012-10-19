@@ -91,39 +91,5 @@
 			<version>2.2.2</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>hibernate3-maven-plugin</artifactId>
-				<version>2.2</version>
-				<configuration>
-					<components>
-						<component>
-							<name>hbm2ddl</name>
-							<implementation>annotationconfiguration</implementation>
-						</component>
-					</components>
-					<componentProperties>
-						<propertyfile>src/test/resources/hibernate/database.properties</propertyfile>
-						<configurationfile>src/test/resources/hibernate/hibernate.cfg.xml</configurationfile>
-						<outputfilename>../../../src/test/resources/dbunit/schema.ddl</outputfilename>
-
-
-						<!-- <propertyfile>src/main/resources/hibernate/database.properties</propertyfile> 
-							<configurationfile>src/main/resources/hibernate/hibernate.cfg.xml</configurationfile> 
-							<outputfilename>schema.ddl</outputfilename> -->
-						<jdk5>true</jdk5>
-						<drop>true</drop>
-						<create>true</create>
-						<export>false</export>
-						<format>true</format>
-					</componentProperties>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
 </project>
