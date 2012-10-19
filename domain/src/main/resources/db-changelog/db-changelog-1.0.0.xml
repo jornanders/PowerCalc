@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+	<changeSet id="1" author="jas">
+
+		<createTable tableName="maaleavlesning">
+			<column name="avlesningId" type="bigint">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="dato" type="datetime">
+				<constraints nullable="false" />
+			</column>
+			<column name="punkt" type="varchar2(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="stand" type="bigint">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+		<createSequence sequenceName="maaleavlesning_seq" />
+
+		<createTable tableName="regning">
+			<column name="regningId" type="bigint">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="fradato" type="datetime">
+				<constraints nullable="false" />
+			</column>
+			<column name="tildato" type="datetime">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+		<createSequence sequenceName="regning_seq" />
+
+		<createTable tableName="regning_linje">
+			<column name="regningLinjeId" type="bigint">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="avsender" type="varchar2(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="sumverdi" type="NUMBER(10,2)">
+				<constraints nullable="false" />
+			</column>
+			<column name="regningId" type="bigint">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+		<createSequence sequenceName="regning_linje_seq" />
+		<addForeignKeyConstraint constraintName="regning_linje_fk" referencedTableName="regning"
+				baseColumnNames="regningId" baseTableName="regning_linje" referencedColumnNames="regningId" />
+
+	</changeSet>
+</databaseChangeLog>

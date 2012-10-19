@@ -11,25 +11,18 @@ import org.dbunit.dataset.IDataSet;
 import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
 import org.dbunit.ext.hsqldb.HsqldbDataTypeFactory;
 import org.dbunit.operation.DatabaseOperation;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.AfterTransaction;
 import org.springframework.test.context.transaction.BeforeTransaction;
 import org.springframework.test.context.transaction.TransactionConfiguration;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author Jørn Anders Svendsen
  *
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:spring/repositories-test.xml", "classpath:spring/hsqldb.xml" })
-@TransactionConfiguration(transactionManager="txMgr", defaultRollback=false)
-@Transactional
-public abstract class AbstractDatabaseTest {
+@TransactionConfiguration(transactionManager="transactionManager", defaultRollback=false)
+public abstract class AbstractDatabaseTest extends RepositoryTestContext {
 
 	@Autowired
 	private DataSource dataSource;

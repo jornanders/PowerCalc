@@ -10,9 +10,11 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 /**
@@ -26,7 +28,8 @@ public class RegningLinje implements Serializable {
 	private static final long serialVersionUID = 558235322801883129L;
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(generator = "regninglinje", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "regninglinje", sequenceName = "regning_linje_seq")
 	@Column(name = "regningLinjeId", nullable = false)
 	private Integer regningLinjeId;
 

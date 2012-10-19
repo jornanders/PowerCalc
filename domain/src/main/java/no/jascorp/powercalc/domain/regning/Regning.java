@@ -10,8 +10,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import no.jascorp.powercalc.domain.common.Datointervall;
@@ -26,7 +28,8 @@ import no.jascorp.powercalc.util.Utils;
 public class Regning {
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(generator = "regning", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "regning", sequenceName = "regning_seq")
 	@Column(name = "regningId", nullable = false)
 	private Integer regningId;
 	

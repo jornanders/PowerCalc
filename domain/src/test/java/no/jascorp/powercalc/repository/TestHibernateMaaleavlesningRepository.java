@@ -1,8 +1,9 @@
 package no.jascorp.powercalc.repository;
 
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Date;
@@ -17,6 +18,8 @@ import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Required;
+import org.springframework.transaction.TransactionSystemException;
+import org.springframework.transaction.annotation.Transactional;
 
 public class TestHibernateMaaleavlesningRepository extends AbstractDatabaseTest {
 	
@@ -29,6 +32,7 @@ public class TestHibernateMaaleavlesningRepository extends AbstractDatabaseTest 
 	}
 
 	@Test
+	@Transactional
 	public void testSaveMaaleavlesning() {
 		Maaleavlesning maaleavlesning = new Maaleavlesning(Maalepunkt.HOVEDETASJE, new Date(), 120);
 		repository.save(maaleavlesning);
@@ -37,40 +41,26 @@ public class TestHibernateMaaleavlesningRepository extends AbstractDatabaseTest 
 	}
 	
 	@Test
+	@Transactional
 	public void testGetMaaleavlesning() {
-		Maaleavlesning maaleavlesning = repository.get(220);
+		Maaleavlesning maaleavlesning = repository.findOne(220);
 		Logger.getLogger(getClass()).debug(maaleavlesning);
-		assertNotNull(maaleavlesning);
+		assertThat(maaleavlesning, is(notNullValue()));
 	}
 
 	@Test
+	@Transactional
 	public void testGetAllMaaleavlesninger() {
-		Maaleavlesninger maaleavlesninger = repository.getMaaleavlesninger();
+		Maaleavlesninger maaleavlesninger = new Maaleavlesninger(repository.findAll());
 		double beregnForbrukForIntervall = maaleavlesninger.beregnForbrukForIntervall(new Datointervall("01.01.2011", "31.12.2011"), Maalepunkt.HOVEDMAALER);
 		assertEquals(18051.225806451614, beregnForbrukForIntervall, 0d);
 	}
 	
-	@Test
-	public void testSetAvlesningIdNotPossible() {
-		Maaleavlesning maaleavlesning = new Maaleavlesning(Maalepunkt.HYBELMAALER, "01.01.2011", 23);
-		maaleavlesning.setAvlesningId(13);
-		repository.save(maaleavlesning);
-		assertNotNull(maaleavlesning.getAvlesningId());
-		assertTrue(maaleavlesning.getAvlesningId() != 13);
-		maaleavlesning = repository.get(13);
-		assertNull(maaleavlesning);
-	}
-	
-	@Test(expected=IllegalArgumentException.class)
+	@Test(expected=TransactionSystemException.class)
 	public void testNotPossibleToSaveNullAvlesning() {
 		repository.save(Maaleavlesning.NULL_AVLESNING);
 	}
 	
-	@Test(expected=IllegalArgumentException.class)
-	public void testStandMustBeIncreasing() {
-		repository.save(new Maaleavlesning(Maalepunkt.HYBELMAALER, "23.03.2011", 50));
-	}
-
 	@Override
 	protected String getDataSetFileName() {
 		return "dbunit/maaleavlesning_create";

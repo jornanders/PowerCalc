@@ -10,10 +10,15 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 
 import no.jascorp.powercalc.util.Utils;
 
@@ -23,7 +28,7 @@ import org.hibernate.annotations.Immutable;
  * @author Jørn Anders Svendsen
  *
  */
-@Entity()
+@Entity
 @Immutable
 @Access(AccessType.FIELD)
 @Table(name = "maaleavlesning")
@@ -34,19 +39,24 @@ public class Maaleavlesning implements Comparable<Maaleavlesning>, Serializable 
 	public static final Maaleavlesning NULL_AVLESNING = new Maaleavlesning(Maalepunkt.NULL_VALUE, Utils.stringToDate("01.01.1900"), 0); 
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(generator = "maaleavlesning", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "maaleavlesning", sequenceName = "maaleavlesning_seq")
 	@Column(name = "avlesningId", nullable = false)
 	private Integer avlesningId;
 
 	@Enumerated(EnumType.STRING)
 	@Column(name = "punkt", nullable = false)
+	@NotNull
 	private final Maalepunkt punkt;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name = "dato", nullable = false, length = 10)
+	@NotNull
+	@Past
 	private final Date dato;
 	
 	@Column(name = "stand", nullable = false)
+	@Min(1)
 	private final int stand;
 
 	Maaleavlesning() {
