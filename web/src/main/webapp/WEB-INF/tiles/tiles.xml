@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<!-- Default template med full dekorasjon -->
+	<definition name="default" template="/WEB-INF/tiles/template.jsp">
+	</definition>
+	<!-- Blank template uten HTML-struktur. Brukes der man lager JSP'er med HTML snippets som skal lastes dynamisk inn i en annen side -->
+	<definition name="blank" template="/WEB-INF/tiles/template-blank.jsp">
+	</definition>
+	<!-- Ren HTML template -->
+	<definition name="plain" template="/WEB-INF/tiles/template-plain-html.jsp">
+	</definition>		
+</tiles-definitions>

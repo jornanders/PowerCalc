@@ -1,0 +1,900 @@
+30.10.2012 01:06:25 -    INFO  org.eclipse.jetty.server.Server     - jetty-8.1.1.v20120215
+30.10.2012 01:06:25 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:06:26 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:06:26 -    INFO  /powercalc     - Initializing Spring root WebApplicationContext
+30.10.2012 01:06:26 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization started
+30.10.2012 01:06:26 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing Root WebApplicationContext: startup date [Tue Oct 30 01:06:26 CET 2012]; root of context hierarchy
+30.10.2012 01:06:26 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.AppConfig]
+30.10.2012 01:06:26 -    INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader     - Loading XML bean definitions from class path resource [jpaConfig.xml]
+30.10.2012 01:06:26 -    ERROR org.springframework.web.context.ContextLoader     - Context initialization failed
+java.lang.IllegalStateException: CGLIB is required to process @Configuration classes. Either add CGLIB to the classpath or remove the following @Configuration bean definitions: [appConfig, persistenceConfig, propertyConfig]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:222)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:686)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:625)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:764)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:406)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:756)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:242)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+30.10.2012 01:06:26 -    WARN  org.eclipse.jetty.webapp.WebAppContext     - Failed startup of context o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+java.lang.IllegalStateException: CGLIB is required to process @Configuration classes. Either add CGLIB to the classpath or remove the following @Configuration bean definitions: [appConfig, persistenceConfig, propertyConfig]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:222)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:686)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:625)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:764)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:406)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:756)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:242)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+30.10.2012 01:06:26 -    WARN  org.eclipse.jetty.util.component.AbstractLifeCycle     - FAILED SelectChannelConnector@0.0.0.0:8080: java.net.BindException: Address already in use: bind
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:344)
+	at sun.nio.ch.Net.bind(Net.java:336)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:199)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:173)
+	at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:311)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:251)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:274)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+30.10.2012 01:06:26 -    WARN  org.eclipse.jetty.util.component.AbstractLifeCycle     - FAILED org.eclipse.jetty.server.Server@2b46c61f: java.net.BindException: Address already in use: bind
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:344)
+	at sun.nio.ch.Net.bind(Net.java:336)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:199)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:173)
+	at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:311)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:251)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:274)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+30.10.2012 01:07:26 -    INFO  org.eclipse.jetty.server.Server     - jetty-8.1.1.v20120215
+30.10.2012 01:07:26 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:07:26 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:07:26 -    INFO  /powercalc     - Initializing Spring root WebApplicationContext
+30.10.2012 01:07:26 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization started
+30.10.2012 01:07:26 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing Root WebApplicationContext: startup date [Tue Oct 30 01:07:26 CET 2012]; root of context hierarchy
+30.10.2012 01:07:26 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.AppConfig]
+30.10.2012 01:07:26 -    INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader     - Loading XML bean definitions from class path resource [jpaConfig.xml]
+30.10.2012 01:07:26 -    ERROR org.springframework.web.context.ContextLoader     - Context initialization failed
+java.lang.IllegalStateException: CGLIB is required to process @Configuration classes. Either add CGLIB to the classpath or remove the following @Configuration bean definitions: [appConfig, persistenceConfig, propertyConfig]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:222)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:686)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:625)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:764)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:406)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:756)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:242)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+30.10.2012 01:07:26 -    WARN  org.eclipse.jetty.webapp.WebAppContext     - Failed startup of context o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+java.lang.IllegalStateException: CGLIB is required to process @Configuration classes. Either add CGLIB to the classpath or remove the following @Configuration bean definitions: [appConfig, persistenceConfig, propertyConfig]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:222)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:686)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:625)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:764)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:406)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:756)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:242)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+30.10.2012 01:07:27 -    INFO  org.eclipse.jetty.server.AbstractConnector     - Started SelectChannelConnector@0.0.0.0:8082
+30.10.2012 01:09:03 -    INFO  org.eclipse.jetty.server.Server     - jetty-8.1.1.v20120215
+30.10.2012 01:09:03 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:09:03 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:09:03 -    INFO  /powercalc     - Initializing Spring root WebApplicationContext
+30.10.2012 01:09:03 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization started
+30.10.2012 01:09:03 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing Root WebApplicationContext: startup date [Tue Oct 30 01:09:03 CET 2012]; root of context hierarchy
+30.10.2012 01:09:03 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.AppConfig]
+30.10.2012 01:09:04 -    INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader     - Loading XML bean definitions from class path resource [jpaConfig.xml]
+30.10.2012 01:09:04 -    ERROR org.springframework.web.context.ContextLoader     - Context initialization failed
+java.lang.IllegalStateException: CGLIB is required to process @Configuration classes. Either add CGLIB to the classpath or remove the following @Configuration bean definitions: [appConfig, persistenceConfig, propertyConfig]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:222)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:686)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:625)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:764)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:406)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:756)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:242)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+30.10.2012 01:09:04 -    WARN  org.eclipse.jetty.webapp.WebAppContext     - Failed startup of context o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+java.lang.IllegalStateException: CGLIB is required to process @Configuration classes. Either add CGLIB to the classpath or remove the following @Configuration bean definitions: [appConfig, persistenceConfig, propertyConfig]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:222)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:686)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:625)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:764)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:406)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:756)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:242)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+30.10.2012 01:09:04 -    INFO  org.eclipse.jetty.server.AbstractConnector     - Started SelectChannelConnector@0.0.0.0:8082
+30.10.2012 01:11:17 -    INFO  org.eclipse.jetty.server.Server     - jetty-8.1.1.v20120215
+30.10.2012 01:11:17 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:11:17 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:11:17 -    INFO  /powercalc     - Initializing Spring root WebApplicationContext
+30.10.2012 01:11:17 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization started
+30.10.2012 01:11:17 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing Root WebApplicationContext: startup date [Tue Oct 30 01:11:17 CET 2012]; root of context hierarchy
+30.10.2012 01:11:17 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.AppConfig]
+30.10.2012 01:11:17 -    INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader     - Loading XML bean definitions from class path resource [jpaConfig.xml]
+30.10.2012 01:11:18 -    ERROR org.springframework.web.context.ContextLoader     - Context initialization failed
+java.lang.IllegalStateException: CGLIB is required to process @Configuration classes. Either add CGLIB to the classpath or remove the following @Configuration bean definitions: [appConfig, persistenceConfig, propertyConfig]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:222)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:686)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:625)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:764)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:406)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:756)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:242)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+30.10.2012 01:11:18 -    WARN  org.eclipse.jetty.webapp.WebAppContext     - Failed startup of context o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+java.lang.IllegalStateException: CGLIB is required to process @Configuration classes. Either add CGLIB to the classpath or remove the following @Configuration bean definitions: [appConfig, persistenceConfig, propertyConfig]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:222)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:686)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:625)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:764)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:406)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:756)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:242)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+30.10.2012 01:11:18 -    INFO  org.eclipse.jetty.server.AbstractConnector     - Started SelectChannelConnector@0.0.0.0:8082
+30.10.2012 01:12:55 -    INFO  org.eclipse.jetty.server.Server     - jetty-8.1.1.v20120215
+30.10.2012 01:12:56 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:12:56 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:12:56 -    INFO  /powercalc     - Initializing Spring root WebApplicationContext
+30.10.2012 01:12:56 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization started
+30.10.2012 01:12:56 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing Root WebApplicationContext: startup date [Tue Oct 30 01:12:56 CET 2012]; root of context hierarchy
+30.10.2012 01:12:56 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.AppConfig]
+30.10.2012 01:12:56 -    INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader     - Loading XML bean definitions from class path resource [jpaConfig.xml]
+30.10.2012 01:12:56 -    WARN  no.jascorp.powercalc.springconfig.PropertyConfig     - Path for property fil er ikke satt. Vennligst sett path i systemvariabelen 'powercalc.properties.path'. Bruker default property fil (application.properties).
+30.10.2012 01:12:56 -    INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer     - Loading properties file from class path resource [application.properties]
+30.10.2012 01:12:57 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'persistenceConfig' of type [class no.jascorp.powercalc.springconfig.PersistenceConfig$$EnhancerByCGLIB$$c422ae6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:12:57 -    INFO  org.springframework.jdbc.datasource.DriverManagerDataSource     - Loaded JDBC driver: org.h2.Driver
+30.10.2012 01:12:57 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:12:57 -    INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean     - Building JPA container EntityManagerFactory for persistence unit 'default'
+30.10.2012 01:12:57 -    INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+30.10.2012 01:12:57 -    INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.0.1.Final}
+30.10.2012 01:12:57 -    INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+30.10.2012 01:12:57 -    INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+30.10.2012 01:12:58 -    INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+30.10.2012 01:12:59 -    INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+30.10.2012 01:12:59 -    INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder     - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+30.10.2012 01:12:59 -    INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+30.10.2012 01:12:59 -    INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+30.10.2012 01:12:59 -    INFO  org.hibernate.validator.util.Version     - Hibernate Validator 4.2.0.Final
+30.10.2012 01:13:00 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'entityManagerFactoryBean' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:13:00 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@64d2adce: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,persistenceConfig,entityManagerFactoryBean,dataSource,liquibaseMigration,transactionManager,maaleavlesningRepository,regningRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,propertyConfig,propertyPlaceholder]; root of factory hierarchy
+30.10.2012 01:13:02 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization completed in 6601 ms
+30.10.2012 01:13:02 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:13:02 -    INFO  /powercalc     - Initializing Spring FrameworkServlet 'powercalc'
+30.10.2012 01:13:02 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization started
+30.10.2012 01:13:03 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing WebApplicationContext for namespace 'powercalc-servlet': startup date [Tue Oct 30 01:13:03 CET 2012]; parent: Root WebApplicationContext
+30.10.2012 01:13:03 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - No annotated classes found for specified class/package [no.slf.estil.springconfig.WebConfig]
+30.10.2012 01:13:03 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3a03c1d4: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@64d2adce
+30.10.2012 01:13:03 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization completed in 820 ms
+30.10.2012 01:13:03 -    INFO  org.eclipse.jetty.server.AbstractConnector     - Started SelectChannelConnector@0.0.0.0:8082
+30.10.2012 01:13:07 -    WARN  org.springframework.web.servlet.PageNotFound     - No mapping found for HTTP request with URI [/powercalc/demo.html] in DispatcherServlet with name 'powercalc'
+30.10.2012 01:13:31 -    WARN  org.springframework.web.servlet.PageNotFound     - No mapping found for HTTP request with URI [/powercalc/demo.html] in DispatcherServlet with name 'powercalc'
+30.10.2012 01:14:30 -    INFO  org.eclipse.jetty.server.Server     - jetty-8.1.1.v20120215
+30.10.2012 01:14:30 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:14:30 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:14:30 -    INFO  /powercalc     - Initializing Spring root WebApplicationContext
+30.10.2012 01:14:30 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization started
+30.10.2012 01:14:30 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing Root WebApplicationContext: startup date [Tue Oct 30 01:14:30 CET 2012]; root of context hierarchy
+30.10.2012 01:14:31 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.AppConfig]
+30.10.2012 01:14:31 -    INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader     - Loading XML bean definitions from class path resource [jpaConfig.xml]
+30.10.2012 01:14:31 -    WARN  no.jascorp.powercalc.springconfig.PropertyConfig     - Path for property fil er ikke satt. Vennligst sett path i systemvariabelen 'powercalc.properties.path'. Bruker default property fil (application.properties).
+30.10.2012 01:14:31 -    INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer     - Loading properties file from class path resource [application.properties]
+30.10.2012 01:14:32 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'persistenceConfig' of type [class no.jascorp.powercalc.springconfig.PersistenceConfig$$EnhancerByCGLIB$$c3a66b29] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:14:32 -    INFO  org.springframework.jdbc.datasource.DriverManagerDataSource     - Loaded JDBC driver: org.h2.Driver
+30.10.2012 01:14:32 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:14:32 -    INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean     - Building JPA container EntityManagerFactory for persistence unit 'default'
+30.10.2012 01:14:32 -    INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+30.10.2012 01:14:32 -    INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.0.1.Final}
+30.10.2012 01:14:32 -    INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+30.10.2012 01:14:32 -    INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+30.10.2012 01:14:33 -    INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+30.10.2012 01:14:33 -    INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+30.10.2012 01:14:33 -    INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder     - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+30.10.2012 01:14:33 -    INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+30.10.2012 01:14:33 -    INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+30.10.2012 01:14:33 -    INFO  org.hibernate.validator.util.Version     - Hibernate Validator 4.2.0.Final
+30.10.2012 01:14:34 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'entityManagerFactoryBean' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:14:34 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4dcc6b53: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,persistenceConfig,entityManagerFactoryBean,dataSource,liquibaseMigration,transactionManager,maaleavlesningRepository,regningRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,propertyConfig,propertyPlaceholder]; root of factory hierarchy
+30.10.2012 01:14:36 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization completed in 6044 ms
+30.10.2012 01:14:36 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:14:37 -    INFO  /powercalc     - Initializing Spring FrameworkServlet 'powercalc'
+30.10.2012 01:14:37 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization started
+30.10.2012 01:14:37 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing WebApplicationContext for namespace 'powercalc-servlet': startup date [Tue Oct 30 01:14:37 CET 2012]; parent: Root WebApplicationContext
+30.10.2012 01:14:37 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - No annotated classes found for specified class/package [no.slf.estil.springconfig.WebConfig]
+30.10.2012 01:14:37 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@139cf776: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@4dcc6b53
+30.10.2012 01:14:38 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization completed in 880 ms
+30.10.2012 01:14:38 -    INFO  org.eclipse.jetty.server.AbstractConnector     - Started SelectChannelConnector@0.0.0.0:8082
+30.10.2012 01:14:40 -    WARN  org.springframework.web.servlet.PageNotFound     - No mapping found for HTTP request with URI [/powercalc/demo.html] in DispatcherServlet with name 'powercalc'
+30.10.2012 01:14:41 -    WARN  org.springframework.web.servlet.PageNotFound     - No mapping found for HTTP request with URI [/powercalc/demo.html] in DispatcherServlet with name 'powercalc'
+30.10.2012 01:14:42 -    WARN  org.springframework.web.servlet.PageNotFound     - No mapping found for HTTP request with URI [/powercalc/demo.html] in DispatcherServlet with name 'powercalc'
+30.10.2012 01:14:42 -    WARN  org.springframework.web.servlet.PageNotFound     - No mapping found for HTTP request with URI [/powercalc/demo.html] in DispatcherServlet with name 'powercalc'
+30.10.2012 01:14:42 -    WARN  org.springframework.web.servlet.PageNotFound     - No mapping found for HTTP request with URI [/powercalc/demo.html] in DispatcherServlet with name 'powercalc'
+30.10.2012 01:15:50 -    INFO  org.eclipse.jetty.server.Server     - jetty-8.1.1.v20120215
+30.10.2012 01:15:50 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:15:50 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:15:50 -    INFO  /powercalc     - Initializing Spring root WebApplicationContext
+30.10.2012 01:15:50 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization started
+30.10.2012 01:15:51 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing Root WebApplicationContext: startup date [Tue Oct 30 01:15:51 CET 2012]; root of context hierarchy
+30.10.2012 01:15:51 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.AppConfig]
+30.10.2012 01:15:51 -    INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader     - Loading XML bean definitions from class path resource [jpaConfig.xml]
+30.10.2012 01:15:51 -    WARN  no.jascorp.powercalc.springconfig.PropertyConfig     - Path for property fil er ikke satt. Vennligst sett path i systemvariabelen 'powercalc.properties.path'. Bruker default property fil (application.properties).
+30.10.2012 01:15:51 -    INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer     - Loading properties file from class path resource [application.properties]
+30.10.2012 01:15:52 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'persistenceConfig' of type [class no.jascorp.powercalc.springconfig.PersistenceConfig$$EnhancerByCGLIB$$1034750b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:15:52 -    INFO  org.springframework.jdbc.datasource.DriverManagerDataSource     - Loaded JDBC driver: org.h2.Driver
+30.10.2012 01:15:52 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:15:52 -    INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean     - Building JPA container EntityManagerFactory for persistence unit 'default'
+30.10.2012 01:15:52 -    INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+30.10.2012 01:15:52 -    INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.0.1.Final}
+30.10.2012 01:15:52 -    INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+30.10.2012 01:15:52 -    INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+30.10.2012 01:15:53 -    INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+30.10.2012 01:15:53 -    INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+30.10.2012 01:15:53 -    INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder     - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+30.10.2012 01:15:53 -    INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+30.10.2012 01:15:53 -    INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+30.10.2012 01:15:54 -    INFO  org.hibernate.validator.util.Version     - Hibernate Validator 4.2.0.Final
+30.10.2012 01:15:54 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'entityManagerFactoryBean' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:15:54 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@63116f42: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,persistenceConfig,entityManagerFactoryBean,dataSource,liquibaseMigration,transactionManager,regningRepository,maaleavlesningRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,propertyConfig,propertyPlaceholder]; root of factory hierarchy
+30.10.2012 01:15:56 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization completed in 5564 ms
+30.10.2012 01:15:56 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:15:56 -    INFO  /powercalc     - Initializing Spring FrameworkServlet 'powercalc'
+30.10.2012 01:15:56 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization started
+30.10.2012 01:15:56 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing WebApplicationContext for namespace 'powercalc-servlet': startup date [Tue Oct 30 01:15:56 CET 2012]; parent: Root WebApplicationContext
+30.10.2012 01:15:56 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - No annotated classes found for specified class/package [no.slf.estil.springconfig.WebConfig]
+30.10.2012 01:15:56 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@310c7c08: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@63116f42
+30.10.2012 01:15:57 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization completed in 760 ms
+30.10.2012 01:15:57 -    INFO  org.eclipse.jetty.server.AbstractConnector     - Started SelectChannelConnector@0.0.0.0:8082
+30.10.2012 01:16:09 -    WARN  org.springframework.web.servlet.PageNotFound     - No mapping found for HTTP request with URI [/powercalc/demo.html] in DispatcherServlet with name 'powercalc'
+30.10.2012 01:17:31 -    INFO  org.eclipse.jetty.server.Server     - jetty-8.1.1.v20120215
+30.10.2012 01:17:31 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:17:31 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:17:31 -    INFO  /powercalc     - Initializing Spring root WebApplicationContext
+30.10.2012 01:17:31 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization started
+30.10.2012 01:17:31 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing Root WebApplicationContext: startup date [Tue Oct 30 01:17:31 CET 2012]; root of context hierarchy
+30.10.2012 01:17:31 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.AppConfig]
+30.10.2012 01:17:31 -    INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader     - Loading XML bean definitions from class path resource [jpaConfig.xml]
+30.10.2012 01:17:32 -    WARN  no.jascorp.powercalc.springconfig.PropertyConfig     - Path for property fil er ikke satt. Vennligst sett path i systemvariabelen 'powercalc.properties.path'. Bruker default property fil (application.properties).
+30.10.2012 01:17:32 -    INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer     - Loading properties file from class path resource [application.properties]
+30.10.2012 01:17:32 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'persistenceConfig' of type [class no.jascorp.powercalc.springconfig.PersistenceConfig$$EnhancerByCGLIB$$850c31e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:17:32 -    INFO  org.springframework.jdbc.datasource.DriverManagerDataSource     - Loaded JDBC driver: org.h2.Driver
+30.10.2012 01:17:32 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:17:32 -    INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean     - Building JPA container EntityManagerFactory for persistence unit 'default'
+30.10.2012 01:17:33 -    INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+30.10.2012 01:17:33 -    INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.0.1.Final}
+30.10.2012 01:17:33 -    INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+30.10.2012 01:17:33 -    INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+30.10.2012 01:17:34 -    INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+30.10.2012 01:17:34 -    INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+30.10.2012 01:17:34 -    INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder     - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+30.10.2012 01:17:34 -    INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+30.10.2012 01:17:34 -    INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+30.10.2012 01:17:34 -    INFO  org.hibernate.validator.util.Version     - Hibernate Validator 4.2.0.Final
+30.10.2012 01:17:35 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'entityManagerFactoryBean' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:17:35 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@279a3e0c: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,persistenceConfig,entityManagerFactoryBean,dataSource,liquibaseMigration,transactionManager,maaleavlesningRepository,regningRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,propertyConfig,propertyPlaceholder]; root of factory hierarchy
+30.10.2012 01:17:37 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization completed in 5685 ms
+30.10.2012 01:17:37 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:17:37 -    INFO  /powercalc     - Initializing Spring FrameworkServlet 'powercalc'
+30.10.2012 01:17:37 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization started
+30.10.2012 01:17:37 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing WebApplicationContext for namespace 'powercalc-servlet': startup date [Tue Oct 30 01:17:37 CET 2012]; parent: Root WebApplicationContext
+30.10.2012 01:17:37 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.WebConfig]
+30.10.2012 01:17:37 -    INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader     - Loading XML bean definitions from class path resource [securityConfig-prepost.xml]
+30.10.2012 01:17:37 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6f2633a9: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,webConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,demoController,delegatingWebMvcConfiguration,requestMappingHandlerMapping,viewControllerHandlerMapping,beanNameHandlerMapping,resourceHandlerMapping,defaultServletHandlerMapping,requestMappingHandlerAdapter,mvcConversionService,mvcValidator,httpRequestHandlerAdapter,simpleControllerHandlerAdapter,handlerExceptionResolver,commonWebConfig,messageSource,validator,springValidatorAdapter,propertyConfig,propertyPlaceholder]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@279a3e0c
+30.10.2012 01:17:37 -    ERROR org.springframework.web.servlet.DispatcherServlet     - Context initialization failed
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [securityConfig-prepost.xml]; nested exception is java.io.FileNotFoundException: class path resource [securityConfig-prepost.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:341)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromImportedResources(ConfigurationClassBeanDefinitionReader.java:303)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:131)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:118)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:294)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:203)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:622)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:631)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:588)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:508)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:449)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:133)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492)
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:776)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.io.FileNotFoundException: class path resource [securityConfig-prepost.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:157)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:328)
+	... 37 more
+30.10.2012 01:17:38 -    WARN  /powercalc     - unavailable
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [securityConfig-prepost.xml]; nested exception is java.io.FileNotFoundException: class path resource [securityConfig-prepost.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:341)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromImportedResources(ConfigurationClassBeanDefinitionReader.java:303)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:131)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:118)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:294)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:203)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:622)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:631)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:588)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:508)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:449)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:133)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492)
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:776)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.io.FileNotFoundException: class path resource [securityConfig-prepost.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:157)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:328)
+	... 37 more
+30.10.2012 01:17:38 -    INFO  org.eclipse.jetty.server.AbstractConnector     - Started SelectChannelConnector@0.0.0.0:8082
+30.10.2012 01:18:16 -    WARN  org.eclipse.jetty.servlet.ServletHandler     - /powercalc/demo.html
+org.eclipse.jetty.servlet.ServletHolder$1: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [securityConfig-prepost.xml]; nested exception is java.io.FileNotFoundException: class path resource [securityConfig-prepost.xml] cannot be opened because it does not exist
+	at org.eclipse.jetty.servlet.ServletHolder.makeUnavailable(ServletHolder.java:464)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:510)
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:776)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [securityConfig-prepost.xml]; nested exception is java.io.FileNotFoundException: class path resource [securityConfig-prepost.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:341)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromImportedResources(ConfigurationClassBeanDefinitionReader.java:303)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:131)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:118)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:294)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:203)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:622)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:631)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:588)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:508)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:449)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:133)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492)
+	... 18 more
+Caused by: java.io.FileNotFoundException: class path resource [securityConfig-prepost.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:157)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:328)
+	... 37 more
+30.10.2012 01:19:08 -    INFO  org.eclipse.jetty.server.Server     - jetty-8.1.1.v20120215
+30.10.2012 01:19:08 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:19:08 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:19:08 -    INFO  /powercalc     - Initializing Spring root WebApplicationContext
+30.10.2012 01:19:08 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization started
+30.10.2012 01:19:08 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing Root WebApplicationContext: startup date [Tue Oct 30 01:19:08 CET 2012]; root of context hierarchy
+30.10.2012 01:19:08 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.AppConfig]
+30.10.2012 01:19:09 -    INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader     - Loading XML bean definitions from class path resource [jpaConfig.xml]
+30.10.2012 01:19:09 -    WARN  no.jascorp.powercalc.springconfig.PropertyConfig     - Path for property fil er ikke satt. Vennligst sett path i systemvariabelen 'powercalc.properties.path'. Bruker default property fil (application.properties).
+30.10.2012 01:19:09 -    INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer     - Loading properties file from class path resource [application.properties]
+30.10.2012 01:19:10 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'persistenceConfig' of type [class no.jascorp.powercalc.springconfig.PersistenceConfig$$EnhancerByCGLIB$$460bd8cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:19:10 -    INFO  org.springframework.jdbc.datasource.DriverManagerDataSource     - Loaded JDBC driver: org.h2.Driver
+30.10.2012 01:19:10 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:19:10 -    INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean     - Building JPA container EntityManagerFactory for persistence unit 'default'
+30.10.2012 01:19:11 -    INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+30.10.2012 01:19:11 -    INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.0.1.Final}
+30.10.2012 01:19:11 -    INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+30.10.2012 01:19:11 -    INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+30.10.2012 01:19:11 -    INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+30.10.2012 01:19:12 -    INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+30.10.2012 01:19:12 -    INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder     - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+30.10.2012 01:19:12 -    INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+30.10.2012 01:19:12 -    INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+30.10.2012 01:19:12 -    INFO  org.hibernate.validator.util.Version     - Hibernate Validator 4.2.0.Final
+30.10.2012 01:19:13 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'entityManagerFactoryBean' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:19:13 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5c55d599: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,persistenceConfig,entityManagerFactoryBean,dataSource,liquibaseMigration,transactionManager,maaleavlesningRepository,regningRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,propertyConfig,propertyPlaceholder]; root of factory hierarchy
+30.10.2012 01:19:15 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization completed in 6894 ms
+30.10.2012 01:19:15 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:19:15 -    INFO  /powercalc     - Initializing Spring FrameworkServlet 'powercalc'
+30.10.2012 01:19:15 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization started
+30.10.2012 01:19:15 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing WebApplicationContext for namespace 'powercalc-servlet': startup date [Tue Oct 30 01:19:15 CET 2012]; parent: Root WebApplicationContext
+30.10.2012 01:19:15 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.WebConfig]
+30.10.2012 01:19:16 -    WARN  no.jascorp.powercalc.springconfig.PropertyConfig     - Path for property fil er ikke satt. Vennligst sett path i systemvariabelen 'powercalc.properties.path'. Bruker default property fil (application.properties).
+30.10.2012 01:19:16 -    INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer     - Loading properties file from class path resource [application.properties]
+30.10.2012 01:19:16 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4c6ae331: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,webConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,demoController,delegatingWebMvcConfiguration,requestMappingHandlerMapping,viewControllerHandlerMapping,beanNameHandlerMapping,resourceHandlerMapping,defaultServletHandlerMapping,requestMappingHandlerAdapter,mvcConversionService,mvcValidator,httpRequestHandlerAdapter,simpleControllerHandlerAdapter,handlerExceptionResolver,commonWebConfig,messageSource,validator,springValidatorAdapter,propertyConfig,propertyPlaceholder]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@5c55d599
+30.10.2012 01:19:16 -    INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping     - Mapped "{[/demo.html],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String no.jascorp.powercalc.web.controller.DemoController.demo()
+30.10.2012 01:19:18 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization completed in 2150 ms
+30.10.2012 01:19:18 -    INFO  org.eclipse.jetty.server.AbstractConnector     - Started SelectChannelConnector@0.0.0.0:8082
+30.10.2012 01:22:49 -    INFO  org.eclipse.jetty.server.Server     - jetty-8.1.1.v20120215
+30.10.2012 01:22:50 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:22:50 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:22:50 -    INFO  /powercalc     - Initializing Spring root WebApplicationContext
+30.10.2012 01:22:50 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization started
+30.10.2012 01:22:50 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing Root WebApplicationContext: startup date [Tue Oct 30 01:22:50 CET 2012]; root of context hierarchy
+30.10.2012 01:22:50 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.AppConfig]
+30.10.2012 01:22:51 -    INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader     - Loading XML bean definitions from class path resource [jpaConfig.xml]
+30.10.2012 01:22:51 -    WARN  no.jascorp.powercalc.springconfig.PropertyConfig     - Path for property fil er ikke satt. Vennligst sett path i systemvariabelen 'powercalc.properties.path'. Bruker default property fil (application.properties).
+30.10.2012 01:22:51 -    INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer     - Loading properties file from class path resource [application.properties]
+30.10.2012 01:22:52 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'persistenceConfig' of type [class no.jascorp.powercalc.springconfig.PersistenceConfig$$EnhancerByCGLIB$$e8563e9c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:22:52 -    INFO  org.springframework.jdbc.datasource.DriverManagerDataSource     - Loaded JDBC driver: org.h2.Driver
+30.10.2012 01:22:52 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:22:52 -    INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean     - Building JPA container EntityManagerFactory for persistence unit 'default'
+30.10.2012 01:22:52 -    INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+30.10.2012 01:22:52 -    INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.0.1.Final}
+30.10.2012 01:22:52 -    INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+30.10.2012 01:22:52 -    INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+30.10.2012 01:22:53 -    INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+30.10.2012 01:22:54 -    INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+30.10.2012 01:22:54 -    INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder     - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+30.10.2012 01:22:54 -    INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+30.10.2012 01:22:54 -    INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+30.10.2012 01:22:54 -    INFO  org.hibernate.validator.util.Version     - Hibernate Validator 4.2.0.Final
+30.10.2012 01:22:55 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'entityManagerFactoryBean' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 01:22:55 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@67cea89c: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,persistenceConfig,entityManagerFactoryBean,dataSource,liquibaseMigration,transactionManager,maaleavlesningRepository,regningRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,propertyConfig,propertyPlaceholder]; root of factory hierarchy
+30.10.2012 01:22:58 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization completed in 7979 ms
+30.10.2012 01:22:58 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 01:22:58 -    INFO  /powercalc     - Initializing Spring FrameworkServlet 'powercalc'
+30.10.2012 01:22:58 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization started
+30.10.2012 01:22:58 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing WebApplicationContext for namespace 'powercalc-servlet': startup date [Tue Oct 30 01:22:58 CET 2012]; parent: Root WebApplicationContext
+30.10.2012 01:22:58 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.WebConfig]
+30.10.2012 01:22:59 -    WARN  no.jascorp.powercalc.springconfig.PropertyConfig     - Path for property fil er ikke satt. Vennligst sett path i systemvariabelen 'powercalc.properties.path'. Bruker default property fil (application.properties).
+30.10.2012 01:22:59 -    INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer     - Loading properties file from class path resource [application.properties]
+30.10.2012 01:22:59 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5e4fcf02: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,webConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,demoController,delegatingWebMvcConfiguration,requestMappingHandlerMapping,viewControllerHandlerMapping,beanNameHandlerMapping,resourceHandlerMapping,defaultServletHandlerMapping,requestMappingHandlerAdapter,mvcConversionService,mvcValidator,httpRequestHandlerAdapter,simpleControllerHandlerAdapter,handlerExceptionResolver,commonWebConfig,messageSource,validator,springValidatorAdapter,propertyConfig,propertyPlaceholder]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@67cea89c
+30.10.2012 01:22:59 -    INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping     - Mapped "{[/demo.html],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String no.jascorp.powercalc.web.controller.DemoController.demo()
+30.10.2012 01:23:00 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization completed in 1935 ms
+30.10.2012 01:23:00 -    INFO  org.eclipse.jetty.server.AbstractConnector     - Started SelectChannelConnector@0.0.0.0:8082
+30.10.2012 08:28:45 -    INFO  org.eclipse.jetty.server.Server     - jetty-8.1.1.v20120215
+30.10.2012 08:28:45 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 08:28:45 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 08:28:45 -    INFO  /powercalc     - Initializing Spring root WebApplicationContext
+30.10.2012 08:28:45 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization started
+30.10.2012 08:28:46 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing Root WebApplicationContext: startup date [Tue Oct 30 08:28:46 CET 2012]; root of context hierarchy
+30.10.2012 08:28:46 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.AppConfig]
+30.10.2012 08:28:46 -    INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader     - Loading XML bean definitions from class path resource [jpaConfig.xml]
+30.10.2012 08:28:47 -    WARN  no.jascorp.powercalc.springconfig.PropertyConfig     - Path for property fil er ikke satt. Vennligst sett path i systemvariabelen 'powercalc.properties.path'. Bruker default property fil (application.properties).
+30.10.2012 08:28:47 -    INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer     - Loading properties file from class path resource [application.properties]
+30.10.2012 08:28:47 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'persistenceConfig' of type [class no.jascorp.powercalc.springconfig.PersistenceConfig$$EnhancerByCGLIB$$6947a3a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 08:28:47 -    INFO  org.springframework.jdbc.datasource.DriverManagerDataSource     - Loaded JDBC driver: org.h2.Driver
+30.10.2012 08:28:47 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 08:28:48 -    INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean     - Building JPA container EntityManagerFactory for persistence unit 'default'
+30.10.2012 08:28:48 -    INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+30.10.2012 08:28:48 -    INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.0.1.Final}
+30.10.2012 08:28:48 -    INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+30.10.2012 08:28:48 -    INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+30.10.2012 08:28:49 -    INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+30.10.2012 08:28:49 -    INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+30.10.2012 08:28:49 -    INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder     - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+30.10.2012 08:28:49 -    INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+30.10.2012 08:28:49 -    INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+30.10.2012 08:28:49 -    INFO  org.hibernate.validator.util.Version     - Hibernate Validator 4.2.0.Final
+30.10.2012 08:28:51 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'entityManagerFactoryBean' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 08:28:51 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7f5f9a23: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,persistenceConfig,entityManagerFactoryBean,dataSource,liquibaseMigration,transactionManager,maaleavlesningRepository,regningRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,propertyConfig,propertyPlaceholder]; root of factory hierarchy
+30.10.2012 08:28:53 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization completed in 7633 ms
+30.10.2012 08:28:53 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 08:28:53 -    INFO  /powercalc     - Initializing Spring FrameworkServlet 'powercalc'
+30.10.2012 08:28:53 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization started
+30.10.2012 08:28:53 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing WebApplicationContext for namespace 'powercalc-servlet': startup date [Tue Oct 30 08:28:53 CET 2012]; parent: Root WebApplicationContext
+30.10.2012 08:28:53 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.WebConfig]
+30.10.2012 08:28:54 -    WARN  no.jascorp.powercalc.springconfig.PropertyConfig     - Path for property fil er ikke satt. Vennligst sett path i systemvariabelen 'powercalc.properties.path'. Bruker default property fil (application.properties).
+30.10.2012 08:28:54 -    INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer     - Loading properties file from class path resource [application.properties]
+30.10.2012 08:28:54 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6b1e4c6e: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,webConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,demoController,delegatingWebMvcConfiguration,requestMappingHandlerMapping,viewControllerHandlerMapping,beanNameHandlerMapping,resourceHandlerMapping,defaultServletHandlerMapping,requestMappingHandlerAdapter,mvcConversionService,mvcValidator,httpRequestHandlerAdapter,simpleControllerHandlerAdapter,handlerExceptionResolver,commonWebConfig,messageSource,validator,springValidatorAdapter,propertyConfig,propertyPlaceholder,configureTilesConfigurer]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@7f5f9a23
+30.10.2012 08:28:54 -    INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping     - Mapped "{[/demo.html],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String no.jascorp.powercalc.web.controller.DemoController.demo()
+30.10.2012 08:28:55 -    INFO  org.springframework.web.servlet.view.tiles2.TilesConfigurer     - TilesConfigurer: adding definitions [/WEB-INF/tiles/tiles.xml,/WEB-INF/views/**/views.xml]
+30.10.2012 08:28:56 -    INFO  org.apache.tiles.context.AbstractTilesApplicationContextFactory     - Initializing Tiles2 application context. . .
+30.10.2012 08:28:56 -    INFO  org.apache.tiles.context.AbstractTilesApplicationContextFactory     - Finished initializing Tiles2 application context.
+30.10.2012 08:28:56 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6b1e4c6e: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,webConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,demoController,delegatingWebMvcConfiguration,requestMappingHandlerMapping,viewControllerHandlerMapping,beanNameHandlerMapping,resourceHandlerMapping,defaultServletHandlerMapping,requestMappingHandlerAdapter,mvcConversionService,mvcValidator,httpRequestHandlerAdapter,simpleControllerHandlerAdapter,handlerExceptionResolver,commonWebConfig,messageSource,validator,springValidatorAdapter,propertyConfig,propertyPlaceholder,configureTilesConfigurer]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@7f5f9a23
+30.10.2012 08:28:56 -    ERROR org.springframework.web.servlet.DispatcherServlet     - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configureTilesConfigurer' defined in class no.jascorp.powercalc.springconfig.WebConfig: Invocation of init method failed; nested exception is org.apache.tiles.definition.DefinitionsFactoryException: Cannot load definition URLs
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:469)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:631)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:588)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:508)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:449)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:133)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492)
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:776)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.apache.tiles.definition.DefinitionsFactoryException: Cannot load definition URLs
+	at org.springframework.web.servlet.view.tiles2.TilesConfigurer$SpringTilesContainerFactory.getSourceURLs(TilesConfigurer.java:428)
+	at org.apache.tiles.factory.BasicTilesContainerFactory.createLocaleDefinitionDao(BasicTilesContainerFactory.java:298)
+	at org.apache.tiles.factory.BasicTilesContainerFactory.createDefinitionsFactory(BasicTilesContainerFactory.java:242)
+	at org.springframework.web.servlet.view.tiles2.TilesConfigurer$SpringTilesContainerFactory.createDefinitionsFactory(TilesConfigurer.java:481)
+	at org.apache.tiles.factory.BasicTilesContainerFactory.createContainer(BasicTilesContainerFactory.java:104)
+	at org.apache.tiles.startup.AbstractTilesInitializer.createContainer(AbstractTilesInitializer.java:124)
+	at org.apache.tiles.startup.AbstractTilesInitializer.initialize(AbstractTilesInitializer.java:70)
+	at org.springframework.web.servlet.view.tiles2.TilesConfigurer.afterPropertiesSet(TilesConfigurer.java:339)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	... 35 more
+Caused by: java.io.FileNotFoundException: ServletContext resource [/WEB-INF/views/] cannot be resolved to URL because it does not exist
+	at org.springframework.web.context.support.ServletContextResource.getURL(ServletContextResource.java:154)
+	at org.springframework.core.io.support.PathMatchingResourcePatternResolver.isJarResource(PathMatchingResourcePatternResolver.java:411)
+	at org.springframework.core.io.support.PathMatchingResourcePatternResolver.findPathMatchingResources(PathMatchingResourcePatternResolver.java:340)
+	at org.springframework.core.io.support.PathMatchingResourcePatternResolver.getResources(PathMatchingResourcePatternResolver.java:279)
+	at org.springframework.web.servlet.view.tiles2.SpringTilesApplicationContextFactory$SpringWildcardServletTilesApplicationContext.getResources(SpringTilesApplicationContextFactory.java:101)
+	at org.springframework.web.servlet.view.tiles2.TilesConfigurer$SpringTilesContainerFactory.getSourceURLs(TilesConfigurer.java:423)
+	... 44 more
+30.10.2012 08:28:56 -    WARN  /powercalc     - unavailable
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configureTilesConfigurer' defined in class no.jascorp.powercalc.springconfig.WebConfig: Invocation of init method failed; nested exception is org.apache.tiles.definition.DefinitionsFactoryException: Cannot load definition URLs
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:469)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:631)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:588)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:508)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:449)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:133)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492)
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:776)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at no.jascorp.powercalc.web.server.WebServer.main(WebServer.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:290)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.apache.tiles.definition.DefinitionsFactoryException: Cannot load definition URLs
+	at org.springframework.web.servlet.view.tiles2.TilesConfigurer$SpringTilesContainerFactory.getSourceURLs(TilesConfigurer.java:428)
+	at org.apache.tiles.factory.BasicTilesContainerFactory.createLocaleDefinitionDao(BasicTilesContainerFactory.java:298)
+	at org.apache.tiles.factory.BasicTilesContainerFactory.createDefinitionsFactory(BasicTilesContainerFactory.java:242)
+	at org.springframework.web.servlet.view.tiles2.TilesConfigurer$SpringTilesContainerFactory.createDefinitionsFactory(TilesConfigurer.java:481)
+	at org.apache.tiles.factory.BasicTilesContainerFactory.createContainer(BasicTilesContainerFactory.java:104)
+	at org.apache.tiles.startup.AbstractTilesInitializer.createContainer(AbstractTilesInitializer.java:124)
+	at org.apache.tiles.startup.AbstractTilesInitializer.initialize(AbstractTilesInitializer.java:70)
+	at org.springframework.web.servlet.view.tiles2.TilesConfigurer.afterPropertiesSet(TilesConfigurer.java:339)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	... 35 more
+Caused by: java.io.FileNotFoundException: ServletContext resource [/WEB-INF/views/] cannot be resolved to URL because it does not exist
+	at org.springframework.web.context.support.ServletContextResource.getURL(ServletContextResource.java:154)
+	at org.springframework.core.io.support.PathMatchingResourcePatternResolver.isJarResource(PathMatchingResourcePatternResolver.java:411)
+	at org.springframework.core.io.support.PathMatchingResourcePatternResolver.findPathMatchingResources(PathMatchingResourcePatternResolver.java:340)
+	at org.springframework.core.io.support.PathMatchingResourcePatternResolver.getResources(PathMatchingResourcePatternResolver.java:279)
+	at org.springframework.web.servlet.view.tiles2.SpringTilesApplicationContextFactory$SpringWildcardServletTilesApplicationContext.getResources(SpringTilesApplicationContextFactory.java:101)
+	at org.springframework.web.servlet.view.tiles2.TilesConfigurer$SpringTilesContainerFactory.getSourceURLs(TilesConfigurer.java:423)
+	... 44 more
+30.10.2012 08:28:56 -    INFO  org.eclipse.jetty.server.AbstractConnector     - Started SelectChannelConnector@0.0.0.0:8082
+30.10.2012 08:31:17 -    INFO  org.eclipse.jetty.server.Server     - jetty-8.1.1.v20120215
+30.10.2012 08:31:17 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 08:31:17 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 08:31:17 -    INFO  /powercalc     - Initializing Spring root WebApplicationContext
+30.10.2012 08:31:17 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization started
+30.10.2012 08:31:17 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing Root WebApplicationContext: startup date [Tue Oct 30 08:31:17 CET 2012]; root of context hierarchy
+30.10.2012 08:31:18 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.AppConfig]
+30.10.2012 08:31:18 -    INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader     - Loading XML bean definitions from class path resource [jpaConfig.xml]
+30.10.2012 08:31:18 -    WARN  no.jascorp.powercalc.springconfig.PropertyConfig     - Path for property fil er ikke satt. Vennligst sett path i systemvariabelen 'powercalc.properties.path'. Bruker default property fil (application.properties).
+30.10.2012 08:31:18 -    INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer     - Loading properties file from class path resource [application.properties]
+30.10.2012 08:31:19 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'persistenceConfig' of type [class no.jascorp.powercalc.springconfig.PersistenceConfig$$EnhancerByCGLIB$$ec1d96d6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 08:31:19 -    INFO  org.springframework.jdbc.datasource.DriverManagerDataSource     - Loaded JDBC driver: org.h2.Driver
+30.10.2012 08:31:19 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 08:31:19 -    INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean     - Building JPA container EntityManagerFactory for persistence unit 'default'
+30.10.2012 08:31:20 -    INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+30.10.2012 08:31:20 -    INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.0.1.Final}
+30.10.2012 08:31:20 -    INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+30.10.2012 08:31:20 -    INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+30.10.2012 08:31:20 -    INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+30.10.2012 08:31:21 -    INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+30.10.2012 08:31:21 -    INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder     - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+30.10.2012 08:31:21 -    INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+30.10.2012 08:31:21 -    INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+30.10.2012 08:31:21 -    INFO  org.hibernate.validator.util.Version     - Hibernate Validator 4.2.0.Final
+30.10.2012 08:31:22 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'entityManagerFactoryBean' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 08:31:22 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@62dca5f4: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,persistenceConfig,entityManagerFactoryBean,dataSource,liquibaseMigration,transactionManager,regningRepository,maaleavlesningRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,propertyConfig,propertyPlaceholder]; root of factory hierarchy
+30.10.2012 08:31:25 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization completed in 7252 ms
+30.10.2012 08:31:25 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 08:31:25 -    INFO  /powercalc     - Initializing Spring FrameworkServlet 'powercalc'
+30.10.2012 08:31:25 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization started
+30.10.2012 08:31:25 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing WebApplicationContext for namespace 'powercalc-servlet': startup date [Tue Oct 30 08:31:25 CET 2012]; parent: Root WebApplicationContext
+30.10.2012 08:31:25 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.WebConfig]
+30.10.2012 08:31:25 -    WARN  no.jascorp.powercalc.springconfig.PropertyConfig     - Path for property fil er ikke satt. Vennligst sett path i systemvariabelen 'powercalc.properties.path'. Bruker default property fil (application.properties).
+30.10.2012 08:31:25 -    INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer     - Loading properties file from class path resource [application.properties]
+30.10.2012 08:31:26 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5fe7337a: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,webConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,demoController,delegatingWebMvcConfiguration,requestMappingHandlerMapping,viewControllerHandlerMapping,beanNameHandlerMapping,resourceHandlerMapping,defaultServletHandlerMapping,requestMappingHandlerAdapter,mvcConversionService,mvcValidator,httpRequestHandlerAdapter,simpleControllerHandlerAdapter,handlerExceptionResolver,commonWebConfig,messageSource,validator,springValidatorAdapter,propertyConfig,propertyPlaceholder,configureTilesConfigurer]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@62dca5f4
+30.10.2012 08:31:26 -    INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping     - Mapped "{[/demo.html],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String no.jascorp.powercalc.web.controller.DemoController.demo()
+30.10.2012 08:31:27 -    INFO  org.springframework.web.servlet.view.tiles2.TilesConfigurer     - TilesConfigurer: adding definitions [/WEB-INF/tiles/tiles.xml,/WEB-INF/views/**/views.xml]
+30.10.2012 08:31:27 -    INFO  org.apache.tiles.context.AbstractTilesApplicationContextFactory     - Initializing Tiles2 application context. . .
+30.10.2012 08:31:27 -    INFO  org.apache.tiles.context.AbstractTilesApplicationContextFactory     - Finished initializing Tiles2 application context.
+30.10.2012 08:31:27 -    INFO  org.apache.tiles.access.TilesAccess     - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles2.SpringTilesApplicationContextFactory$SpringWildcardServletTilesApplicationContext
+30.10.2012 08:31:27 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization completed in 2137 ms
+30.10.2012 08:31:27 -    INFO  org.eclipse.jetty.server.AbstractConnector     - Started SelectChannelConnector@0.0.0.0:8082
+30.10.2012 08:34:03 -    INFO  org.eclipse.jetty.server.Server     - jetty-8.1.1.v20120215
+30.10.2012 08:34:04 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 08:34:04 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 08:34:04 -    INFO  /powercalc     - Initializing Spring root WebApplicationContext
+30.10.2012 08:34:04 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization started
+30.10.2012 08:34:04 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing Root WebApplicationContext: startup date [Tue Oct 30 08:34:04 CET 2012]; root of context hierarchy
+30.10.2012 08:34:04 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.AppConfig]
+30.10.2012 08:34:04 -    INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader     - Loading XML bean definitions from class path resource [jpaConfig.xml]
+30.10.2012 08:34:05 -    WARN  no.jascorp.powercalc.springconfig.PropertyConfig     - Path for property fil er ikke satt. Vennligst sett path i systemvariabelen 'powercalc.properties.path'. Bruker default property fil (application.properties).
+30.10.2012 08:34:05 -    INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer     - Loading properties file from class path resource [application.properties]
+30.10.2012 08:34:06 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'persistenceConfig' of type [class no.jascorp.powercalc.springconfig.PersistenceConfig$$EnhancerByCGLIB$$ec1d96d6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 08:34:06 -    INFO  org.springframework.jdbc.datasource.DriverManagerDataSource     - Loaded JDBC driver: org.h2.Driver
+30.10.2012 08:34:06 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 08:34:06 -    INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean     - Building JPA container EntityManagerFactory for persistence unit 'default'
+30.10.2012 08:34:06 -    INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+30.10.2012 08:34:06 -    INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.0.1.Final}
+30.10.2012 08:34:06 -    INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+30.10.2012 08:34:06 -    INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+30.10.2012 08:34:07 -    INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+30.10.2012 08:34:08 -    INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+30.10.2012 08:34:08 -    INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder     - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+30.10.2012 08:34:08 -    INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+30.10.2012 08:34:08 -    INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+30.10.2012 08:34:08 -    INFO  org.hibernate.validator.util.Version     - Hibernate Validator 4.2.0.Final
+30.10.2012 08:34:09 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Bean 'entityManagerFactoryBean' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+30.10.2012 08:34:10 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@62dca5f4: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,persistenceConfig,entityManagerFactoryBean,dataSource,liquibaseMigration,transactionManager,regningRepository,maaleavlesningRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,propertyConfig,propertyPlaceholder]; root of factory hierarchy
+30.10.2012 08:34:12 -    INFO  org.springframework.web.context.ContextLoader     - Root WebApplicationContext: initialization completed in 7914 ms
+30.10.2012 08:34:12 -    INFO  org.eclipse.jetty.server.handler.ContextHandler     - started o.e.j.w.WebAppContext{/powercalc,file:/C:/Users/jorsve/git/PowerCalc/web/src/main/webapp/},src/main/webapp
+30.10.2012 08:34:12 -    INFO  /powercalc     - Initializing Spring FrameworkServlet 'powercalc'
+30.10.2012 08:34:12 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization started
+30.10.2012 08:34:12 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Refreshing WebApplicationContext for namespace 'powercalc-servlet': startup date [Tue Oct 30 08:34:12 CET 2012]; parent: Root WebApplicationContext
+30.10.2012 08:34:12 -    INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext     - Successfully resolved class for [no.jascorp.powercalc.springconfig.WebConfig]
+30.10.2012 08:34:13 -    WARN  no.jascorp.powercalc.springconfig.PropertyConfig     - Path for property fil er ikke satt. Vennligst sett path i systemvariabelen 'powercalc.properties.path'. Bruker default property fil (application.properties).
+30.10.2012 08:34:13 -    INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer     - Loading properties file from class path resource [application.properties]
+30.10.2012 08:34:13 -    INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory     - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@75666de0: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,webConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,demoController,delegatingWebMvcConfiguration,requestMappingHandlerMapping,viewControllerHandlerMapping,beanNameHandlerMapping,resourceHandlerMapping,defaultServletHandlerMapping,requestMappingHandlerAdapter,mvcConversionService,mvcValidator,httpRequestHandlerAdapter,simpleControllerHandlerAdapter,handlerExceptionResolver,commonWebConfig,configureTilesViewResolver,messageSource,validator,springValidatorAdapter,propertyConfig,propertyPlaceholder,configureTilesConfigurer]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@62dca5f4
+30.10.2012 08:34:13 -    INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping     - Mapped "{[/demo.html],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String no.jascorp.powercalc.web.controller.DemoController.demo()
+30.10.2012 08:34:15 -    INFO  org.springframework.web.servlet.view.tiles2.TilesConfigurer     - TilesConfigurer: adding definitions [/WEB-INF/tiles/tiles.xml,/WEB-INF/views/**/views.xml]
+30.10.2012 08:34:15 -    INFO  org.apache.tiles.context.AbstractTilesApplicationContextFactory     - Initializing Tiles2 application context. . .
+30.10.2012 08:34:15 -    INFO  org.apache.tiles.context.AbstractTilesApplicationContextFactory     - Finished initializing Tiles2 application context.
+30.10.2012 08:34:15 -    INFO  org.apache.tiles.access.TilesAccess     - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles2.SpringTilesApplicationContextFactory$SpringWildcardServletTilesApplicationContext
+30.10.2012 08:34:15 -    INFO  org.springframework.web.servlet.DispatcherServlet     - FrameworkServlet 'powercalc': initialization completed in 3354 ms
+30.10.2012 08:34:15 -    INFO  org.eclipse.jetty.server.AbstractConnector     - Started SelectChannelConnector@0.0.0.0:8082

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	
+	<definition name="*" extends="plain">
+		<put-attribute name="body" value="/WEB-INF/views/{1}.jsp"></put-attribute>
+	</definition>
+	
+	<!-- For at tiles skal støtte nivå 2 i strukturen. -->
+	<definition name="*/*" extends="default">
+    	<put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
+	
+	<definition name="*/parts/*" extends="blank">
+    	<put-attribute name="body" value="/WEB-INF/views/{1}/parts/{2}.jsp" />
+	</definition>
+	
+	<!-- For at tiles skal støtte nivå 3 i strukturen. -->
+	<definition name="*/*/*" extends="default">
+    	<put-attribute name="body" value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
+	</definition>
+	
+	<definition name="*/*/parts/*" extends="blank">
+    	<put-attribute name="body" value="/WEB-INF/views/{1}/{2}/parts/{3}.jsp" />
+	</definition>
+	
+</tiles-definitions>
