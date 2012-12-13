@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.tiles2.TilesViewResolver;
 
 @Configuration
-@ComponentScan(basePackages = {"no.jascorp.powercalc.web"})
+@ComponentScan(basePackages = {"no.jascorp.powercalc.web.controller"})
 public class CommonWebConfig extends WebMvcConfigurerAdapter {
 
 	

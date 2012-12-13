@@ -9,4 +9,6 @@
 </head>
 <body>
 	<h1>PowerCalc demo ÆØÅ</h1>
+	
+	${dingdong}
 </body>
