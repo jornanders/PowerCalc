@@ -1,6 +1,8 @@
 package no.jascorp.powercalc.domain.regning;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Access;
@@ -17,6 +19,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import no.jascorp.powercalc.domain.common.Datointervall;
+import no.jascorp.powercalc.domain.maaleavlesning.Maaleavlesninger;
 import no.jascorp.powercalc.util.Utils;
 
 /**
@@ -52,6 +55,11 @@ public class Regning {
 		this.intervall = null;
 	}
 
+	public Regning(Builder builder) {
+		this(builder.fraDato, builder.tilDato);
+		this.linjer.addAll(builder.linjer);
+	}
+
 	public Integer getRegningId() {
 		return regningId;
 	}
@@ -81,5 +89,39 @@ public class Regning {
 		}
 		sb.append("]");
 		return sb.toString();
+	}
+	
+	public static Builder fra(String fraDato) {
+		return new Builder(fraDato); 
+	}
+	
+	public static class Builder {
+		private final String fraDato;
+		private String tilDato;
+		
+		private List<RegningLinje> linjer = new ArrayList<>();
+
+		public Builder(String fraDato) {
+			this.fraDato = fraDato;
+		}
+
+		public Builder til(String tilDato) {
+			this.tilDato = tilDato;
+			return this;
+		}
+		
+		public Builder linje(RegningLinje linje) {
+			linjer.add(linje);
+			return this;
+		}
+		
+		public Avregning medAvlesninger(Maaleavlesninger avlesninger) {
+			Regning regning = build();
+			return new Avregning(regning, avlesninger);
+		}
+		
+		public Regning build() {
+			return new Regning(this);
+		}
 	}
 }

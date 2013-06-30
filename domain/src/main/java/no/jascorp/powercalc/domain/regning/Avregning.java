@@ -17,6 +17,10 @@ public class Avregning {
 		this.regning = regning;
 		this.avlesninger = avlesninger;
 	}
+	
+	public Regning getRegning() {
+		return regning;
+	}
 
 	public double beregnProsentandel(Maalepunkt maalepunkt) {
 		double prosentandel = maalepunkt.beregnProsentandel(avlesninger, regning.getIntervall());

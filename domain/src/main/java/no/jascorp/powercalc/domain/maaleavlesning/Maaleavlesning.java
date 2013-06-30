@@ -84,6 +84,10 @@ public class Maaleavlesning implements Comparable<Maaleavlesning>, Serializable 
 		this(punkt, Utils.stringToDate(dato), stand);
 	}
 
+	public Maaleavlesning(Builder builder) {
+		this(builder.maalepunkt, builder.dato, builder.stand);
+	}
+
 	public Maalepunkt getPunkt() {
 		return punkt;
 	}
@@ -145,5 +149,41 @@ public class Maaleavlesning implements Comparable<Maaleavlesning>, Serializable 
 		if (stand != other.stand)
 			return false;
 		return true;
+	}
+	
+	public static Builder forPunkt(Maalepunkt punkt) {
+		return new Builder(punkt);
+	}
+	
+	public static Builder forHybel() {
+		return forPunkt(Maalepunkt.HYBELMAALER);
+	}
+
+	public static Builder forHoved() {
+		return forPunkt(Maalepunkt.HOVEDMAALER);
+	}
+	
+	public static class Builder {
+		private final Maalepunkt maalepunkt;
+		private String dato;
+		private int stand;
+
+		public Builder(Maalepunkt maalepunkt) {
+			this.maalepunkt = maalepunkt;
+		}
+		
+		public Builder dato(String dato) {
+			this.dato = dato;
+			return this;
+		}
+
+		public Builder stand(int stand) {
+			this.stand = stand;
+			return this;
+		}
+		
+		public Maaleavlesning build() {
+			return new Maaleavlesning(this);
+		}
 	}
 }

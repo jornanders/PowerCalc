@@ -62,6 +62,11 @@ public class RegningLinje implements Serializable {
 		this.sum = sum;
 	}
 
+	private RegningLinje(Builder builder) {
+		this.avender = builder.avender;
+		this.sum = builder.sum;
+	}
+
 	public Integer getRegningLinjId() {
 		return regningLinjeId;
 	}
@@ -78,5 +83,40 @@ public class RegningLinje implements Serializable {
 	public String toString() {
 		return "RegningLinje [regningLinjeId:" + regningLinjeId + ", regningId:" + regning.getRegningId() + ", avender:" + avender
 				+ ", sum:" + sum + "]";
+	}
+	
+	public static Builder forAvsender(Avsender avsender) {
+		return new Builder(avsender);
+	}
+	
+	public static Builder fraLierEverk() {
+		return forAvsender(Avsender.LIER_EVERK);
+	}
+	
+	public static Builder fraEB() {
+		return forAvsender(Avsender.EB);
+	}
+	
+	public static class Builder {
+		private final Avsender avender;
+		private double sum;
+
+		Builder(Avsender avender) {
+			this.avender = avender;
+		}
+		
+		public RegningLinje medSum(double sum) {
+			this.sum = sum;
+			return build();
+		}
+
+		public Builder sum(double sum) {
+			this.sum = sum;
+			return this;
+		}
+		
+		public RegningLinje build() {
+			return new RegningLinje(this);
+		}
 	}
 }
