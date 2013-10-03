@@ -49,7 +49,8 @@ public class TestAvregning {
 				Maaleavlesning.forHybel().dato("22.01.2013").stand(35733).build(),
 				Maaleavlesning.forHybel().dato("17.03.2013").stand(37486).build(),
 				Maaleavlesning.forHybel().dato("29.06.2013").stand(38886).build(),
-				Maaleavlesning.forHybel().dato("18.08.2013").stand(39102).build());
+				Maaleavlesning.forHybel().dato("18.08.2013").stand(39102).build(),
+				Maaleavlesning.forHybel().dato("01.10.2013").stand(39493).build());
 	}
 
 	private static List<Maaleavlesning> hoved() {
@@ -81,9 +82,37 @@ public class TestAvregning {
 				Maaleavlesning.forHoved().dato("01.04.2013").stand(136895).build(),
 				Maaleavlesning.forHoved().dato("01.05.2013").stand(139457).build(),
 				Maaleavlesning.forHoved().dato("01.06.2013").stand(141207).build(),
-				Maaleavlesning.forHoved().dato("01.07.2013").stand(142797).build());
+				Maaleavlesning.forHoved().dato("01.07.2013").stand(142797).build(),
+				Maaleavlesning.forHoved().dato("01.08.2013").stand(143648).build(),
+				Maaleavlesning.forHoved().dato("01.09.2013").stand(145041).build());
 	}
 	
+	@Test
+	public void testAvregningAugust2013() throws Exception {
+		Avregning avregning = Regning
+				.fra("01.08.2013").til("01.09.2013")
+				.linje(fraLierEverk().medSum(471.41))
+				.linje(fraLierEverk().medSum(99.79/2))
+				.linje(fraEB().medSum(543.23))
+				.medAvlesninger(maaleavlesninger);
+
+		assertEquals(151.20d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+		assertEquals(avregning.getRegning().getSum() - 151.20, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+	}
+
+	@Test
+	public void testAvregningJuli2013() throws Exception {
+		Avregning avregning = Regning
+				.fra("01.07.2013").til("01.08.2013")
+				.linje(fraLierEverk().medSum(288.52))
+				.linje(fraLierEverk().medSum(99.79/2))
+				.linje(fraEB().medSum(364.91))
+				.medAvlesninger(maaleavlesninger);
+		
+		assertEquals(110.68, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+		assertEquals(avregning.getRegning().getSum() - 110.68, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+	}
+
 	@Test
 	public void testAvregningJuni2013() throws Exception {
 		Avregning avregning = Regning
@@ -92,7 +121,7 @@ public class TestAvregning {
 				.linje(fraLierEverk().medSum(98.18/2))
 				.linje(fraEB().medSum(605.31))
 				.medAvlesninger(maaleavlesninger);
-
+		
 		assertEquals(287.46, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
 		assertEquals(avregning.getRegning().getSum() - 287.46, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
 	}
