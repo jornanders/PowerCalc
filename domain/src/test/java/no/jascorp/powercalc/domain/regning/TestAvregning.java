@@ -84,7 +84,36 @@ public class TestAvregning {
 				Maaleavlesning.forHoved().dato("01.06.2013").stand(141207).build(),
 				Maaleavlesning.forHoved().dato("01.07.2013").stand(142797).build(),
 				Maaleavlesning.forHoved().dato("01.08.2013").stand(143648).build(),
-				Maaleavlesning.forHoved().dato("01.09.2013").stand(145041).build());
+				Maaleavlesning.forHoved().dato("01.09.2013").stand(145041).build(),
+				Maaleavlesning.forHoved().dato("01.10.2013").stand(146657).build(),
+				Maaleavlesning.forHoved().dato("01.11.2013").stand(149112).build());
+	}
+	
+	
+	@Test
+	public void testAvregningOktober2013() throws Exception {
+		Avregning avregning = Regning
+				.fra("01.10.2013").til("01.11.2013")
+				.linje(fraLierEverk().medSum(954.94))
+				.linje(fraLierEverk().medSum(98.18/2))
+				.linje(fraEB().medSum(892.63))
+				.medAvlesninger(maaleavlesninger);
+
+//		assertEquals(151.20d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+//		assertEquals(avregning.getRegning().getSum() - 151.20, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+	}
+
+	@Test
+	public void testAvregningSeptember2013() throws Exception {
+		Avregning avregning = Regning
+				.fra("01.09.2013").til("01.10.2013")
+				.linje(fraLierEverk().medSum(597.74))
+				.linje(fraLierEverk().medSum(98.18/2))
+				.linje(fraEB().medSum(613.85))
+				.medAvlesninger(maaleavlesninger);
+		
+//		assertEquals(151.20d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+//		assertEquals(avregning.getRegning().getSum() - 151.20, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
 	}
 	
 	@Test
@@ -95,7 +124,7 @@ public class TestAvregning {
 				.linje(fraLierEverk().medSum(99.79/2))
 				.linje(fraEB().medSum(543.23))
 				.medAvlesninger(maaleavlesninger);
-
+		
 		assertEquals(151.20d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
 		assertEquals(avregning.getRegning().getSum() - 151.20, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
 	}
