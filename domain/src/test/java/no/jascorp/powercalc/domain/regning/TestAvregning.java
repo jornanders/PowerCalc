@@ -50,7 +50,8 @@ public class TestAvregning {
 				Maaleavlesning.forHybel().dato("17.03.2013").stand(37486).build(),
 				Maaleavlesning.forHybel().dato("29.06.2013").stand(38886).build(),
 				Maaleavlesning.forHybel().dato("18.08.2013").stand(39102).build(),
-				Maaleavlesning.forHybel().dato("01.10.2013").stand(39493).build());
+				Maaleavlesning.forHybel().dato("01.10.2013").stand(39493).build(),
+				Maaleavlesning.forHybel().dato("02.12.2013").stand(40736).build());
 	}
 
 	private static List<Maaleavlesning> hoved() {
@@ -99,8 +100,8 @@ public class TestAvregning {
 				.linje(fraEB().medSum(892.63))
 				.medAvlesninger(maaleavlesninger);
 
-//		assertEquals(151.20d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
-//		assertEquals(avregning.getRegning().getSum() - 151.20, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+		assertEquals(480.15d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+		assertEquals(avregning.getRegning().getSum() - 480.15, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
 	}
 
 	@Test
@@ -112,8 +113,8 @@ public class TestAvregning {
 				.linje(fraEB().medSum(613.85))
 				.medAvlesninger(maaleavlesninger);
 		
-//		assertEquals(151.20d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
-//		assertEquals(avregning.getRegning().getSum() - 151.20, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+		assertEquals(207.97d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+		assertEquals(avregning.getRegning().getSum() - 207.97, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
 	}
 	
 	@Test
