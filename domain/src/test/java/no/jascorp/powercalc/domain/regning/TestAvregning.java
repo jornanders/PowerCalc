@@ -51,7 +51,8 @@ public class TestAvregning {
 				Maaleavlesning.forHybel().dato("29.06.2013").stand(38886).build(),
 				Maaleavlesning.forHybel().dato("18.08.2013").stand(39102).build(),
 				Maaleavlesning.forHybel().dato("01.10.2013").stand(39493).build(),
-				Maaleavlesning.forHybel().dato("02.12.2013").stand(40736).build());
+				Maaleavlesning.forHybel().dato("02.12.2013").stand(40736).build(),
+				Maaleavlesning.forHybel().dato("23.02.2014").stand(43191).build());
 	}
 
 	private static List<Maaleavlesning> hoved() {
@@ -87,9 +88,37 @@ public class TestAvregning {
 				Maaleavlesning.forHoved().dato("01.08.2013").stand(143648).build(),
 				Maaleavlesning.forHoved().dato("01.09.2013").stand(145041).build(),
 				Maaleavlesning.forHoved().dato("01.10.2013").stand(146657).build(),
-				Maaleavlesning.forHoved().dato("01.11.2013").stand(149112).build());
+				Maaleavlesning.forHoved().dato("01.11.2013").stand(149112).build(),
+				Maaleavlesning.forHoved().dato("01.12.2013").stand(152849).build(),
+				Maaleavlesning.forHoved().dato("01.01.2014").stand(156519).build()
+				);
+	}
+
+	@Test
+	public void testAvregningDesember2013() throws Exception {
+		Avregning avregning = Regning
+				.fra("01.12.2013").til("01.01.2014")
+				.linje(fraLierEverk().medSum(1312.58))
+				.linje(fraLierEverk().medSum(98.18/2))
+				.linje(fraEB().medSum(1374.94))
+				.medAvlesninger(maaleavlesninger);
+
+		assertEquals(676.62d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+		assertEquals(avregning.getRegning().getSum() - 676.62, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
 	}
 	
+	@Test
+	public void testAvregningNovember2013() throws Exception {
+		Avregning avregning = Regning
+				.fra("01.11.2013").til("01.12.2013")
+				.linje(fraLierEverk().medSum(1441.31))
+				.linje(fraLierEverk().medSum(98.18/2))
+				.linje(fraEB().medSum(1395.74))
+				.medAvlesninger(maaleavlesninger);
+
+		assertEquals(464.51d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+		assertEquals(avregning.getRegning().getSum() - 464.51, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+	}
 	
 	@Test
 	public void testAvregningOktober2013() throws Exception {
