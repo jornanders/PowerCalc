@@ -54,7 +54,9 @@ public class TestAvregning {
 				Maaleavlesning.forHybel().dato("02.12.2013").stand(40736).build(),
 				Maaleavlesning.forHybel().dato("23.02.2014").stand(43191).build(),
 				Maaleavlesning.forHybel().dato("15.06.2014").stand(44618).build(),
-				Maaleavlesning.forHybel().dato("01.09.2014").stand(44909).build());
+				Maaleavlesning.forHybel().dato("01.09.2014").stand(44909).build(),
+				Maaleavlesning.forHybel().dato("26.03.2015").stand(49231).build(),
+				Maaleavlesning.forHybel().dato("09.06.2015").stand(50322).build());
 	}
 
 	private static List<Maaleavlesning> hoved() {
@@ -100,9 +102,121 @@ public class TestAvregning {
 				Maaleavlesning.forHoved().dato("01.06.2014").stand(172389).build(),
 				Maaleavlesning.forHoved().dato("01.07.2014").stand(173673).build(),
 				Maaleavlesning.forHoved().dato("01.08.2014").stand(174594).build(),
-				Maaleavlesning.forHoved().dato("01.09.2014").stand(176033).build()
+				Maaleavlesning.forHoved().dato("01.09.2014").stand(176033).build(),
+				Maaleavlesning.forHoved().dato("01.10.2014").stand(177503).build(),
+				Maaleavlesning.forHoved().dato("01.11.2014").stand(180195).build(),
+				Maaleavlesning.forHoved().dato("08.12.2014").stand(184199).build(),
+				Maaleavlesning.forHoved().dato("01.01.2015").stand(187683).build(),
+				Maaleavlesning.forHoved().dato("09.02.2015").stand(193547).build(),
+				Maaleavlesning.forHoved().dato("01.03.2015").stand(196261).build(),
+				Maaleavlesning.forHoved().dato("06.04.2015").stand(200221).build(),
+				Maaleavlesning.forHoved().dato("01.05.2015").stand(202416).build()
 				);
 	}
+
+	@Test
+	public void testAvregningApril2015() throws Exception {
+		Avregning avregning = Regning
+				.fra("01.04.2015").til("01.05.2015")
+				.linje(fraLierEverk().medSum(783.18))
+				.linje(fraLierEverk().medSum(98.18/2))
+				.linje(fraEB().medSum(2756.84/2))
+				.medAvlesninger(maaleavlesninger);
+
+		assertEquals(351.46d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+		assertEquals(avregning.getRegning().getSum() - 351.46, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+	}
+
+	@Test
+	public void testAvregningMars2015() throws Exception {
+		Avregning avregning = Regning
+				.fra("01.03.2015").til("01.04.2015")
+				.linje(fraLierEverk().medSum(998.49))
+				.linje(fraLierEverk().medSum(98.18/2))
+				.linje(fraEB().medSum(2756.84/2))
+				.medAvlesninger(maaleavlesninger);
+
+		assertEquals(435.25d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+		assertEquals(avregning.getRegning().getSum() - 435.25, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+	}
+
+	@Test
+	public void testAvregningFebruar2015() throws Exception {
+		Avregning avregning = Regning
+				.fra("01.02.2015").til("01.03.2015")
+				.linje(fraLierEverk().medSum(1324.58))
+				.linje(fraLierEverk().medSum(94.97/2))
+				.linje(fraEB().medSum(3776.32/2))
+				.medAvlesninger(maaleavlesninger);
+
+		assertEquals(488.97d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+		assertEquals(avregning.getRegning().getSum() - 488.97, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+	}
+
+	@Test
+	public void testAvregningJanuar2015() throws Exception {
+		Avregning avregning = Regning
+				.fra("01.01.2015").til("01.02.2015")
+				.linje(fraLierEverk().medSum(1592.41))
+				.linje(fraLierEverk().medSum(94.97/2))
+				.linje(fraEB().medSum(3776.32/2))
+				.medAvlesninger(maaleavlesninger);
+
+		assertEquals(492.29d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+		assertEquals(avregning.getRegning().getSum() - 492.29, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+	}
+
+	@Test
+	public void testAvregningDesember2014() throws Exception {
+		Avregning avregning = Regning
+				.fra("01.12.2014").til("01.01.2015")
+				.linje(fraLierEverk().medSum(1622.64))
+				.linje(fraLierEverk().medSum(98.18/2))
+				.linje(fraEB().medSum(3035.16/2))
+				.medAvlesninger(maaleavlesninger);
+
+		assertEquals(489.05d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+		assertEquals(avregning.getRegning().getSum() - 489.05, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+	}
+
+	@Test
+	public void testAvregningNovember2014() throws Exception {
+		Avregning avregning = Regning
+				.fra("01.11.2014").til("01.12.2014")
+				.linje(fraLierEverk().medSum(1000.42))
+				.linje(fraLierEverk().medSum(98.18/2))
+				.linje(fraEB().medSum(3035.16/2))
+				.medAvlesninger(maaleavlesninger);
+
+		assertEquals(497.70d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+		assertEquals(avregning.getRegning().getSum() - 497.70, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+	}
+
+    @Test
+    public void testAvregningOktober2014() throws Exception {
+        Avregning avregning = Regning
+                .fra("01.10.2014").til("01.11.2014")
+                .linje(fraLierEverk().medSum(818.90))
+                .linje(fraLierEverk().medSum(98.18/2))
+                .linje(fraEB().medSum(1670.65/2))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(411.53d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 411.53, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+	@Test
+    public void testAvregningSeptember2014() throws Exception {
+        Avregning avregning = Regning
+                .fra("01.09.2014").til("01.10.2014")
+                .linje(fraLierEverk().medSum(525.95))
+                .linje(fraLierEverk().medSum(98.18/2))
+                .linje(fraEB().medSum(1670.65/2))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(603.88d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 603.88, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
 
     @Test
     public void testAvregningAugust2014() throws Exception {
