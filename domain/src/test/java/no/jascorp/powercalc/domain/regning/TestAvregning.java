@@ -31,6 +31,7 @@ public class TestAvregning {
 		avlesninger.addAll(hybel());
 		avlesninger.addAll(hoved());
 		maaleavlesninger = new Maaleavlesninger(avlesninger);
+		System.out.println("slett meg");
 	}
 
 	
