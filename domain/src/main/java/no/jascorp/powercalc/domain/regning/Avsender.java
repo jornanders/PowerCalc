@@ -6,5 +6,8 @@ package no.jascorp.powercalc.domain.regning;
  */
 public enum Avsender {
 	EB,
-	LIER_EVERK;
+	LIER_EVERK,
+	GLITRE_NETT,
+	GLITRE_STRØM,
+	;
 }

@@ -181,7 +181,7 @@ public class Maaleavlesning implements Comparable<Maaleavlesning>, Serializable 
 			this.stand = stand;
 			return this;
 		}
-		
+
 		public Maaleavlesning build() {
 			return new Maaleavlesning(this);
 		}

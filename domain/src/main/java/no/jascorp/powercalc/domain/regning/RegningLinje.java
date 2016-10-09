@@ -96,7 +96,15 @@ public class RegningLinje implements Serializable {
 	public static Builder fraEB() {
 		return forAvsender(Avsender.EB);
 	}
-	
+
+	public static Builder fraGlitreStrøm() {
+		return forAvsender(Avsender.GLITRE_STRØM);
+	}
+
+	public static Builder fraGlitreNett() {
+		return forAvsender(Avsender.GLITRE_NETT);
+	}
+
 	public static class Builder {
 		private final Avsender avender;
 		private double sum;
