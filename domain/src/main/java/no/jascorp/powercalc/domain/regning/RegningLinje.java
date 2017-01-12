@@ -24,7 +24,7 @@ import javax.persistence.Table;
 @Access(AccessType.FIELD)
 @Table(name = "regning_linje")
 public class RegningLinje implements Serializable {
-	
+
 	private static final long serialVersionUID = 558235322801883129L;
 
 	@Id
@@ -34,7 +34,7 @@ public class RegningLinje implements Serializable {
 	private Integer regningLinjeId;
 
 	@JoinColumn(name = "regningId")
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY)
 	private Regning regning;
 
 	public Regning getRegning() {
@@ -48,7 +48,7 @@ public class RegningLinje implements Serializable {
 	@Enumerated(EnumType.STRING)
 	@Column(name = "avsender", nullable = false)
 	private final Avsender avender;
-	
+
 	@Column(name="sumverdi", nullable = false, scale = 5, precision = 2)
 	private final double sum;
 
@@ -74,7 +74,7 @@ public class RegningLinje implements Serializable {
 	public Avsender getAvender() {
 		return avender;
 	}
-	
+
 	public double getSum() {
 		return sum;
 	}
@@ -84,15 +84,15 @@ public class RegningLinje implements Serializable {
 		return "RegningLinje [regningLinjeId:" + regningLinjeId + ", regningId:" + regning.getRegningId() + ", avender:" + avender
 				+ ", sum:" + sum + "]";
 	}
-	
+
 	public static Builder forAvsender(Avsender avsender) {
 		return new Builder(avsender);
 	}
-	
+
 	public static Builder fraLierEverk() {
 		return forAvsender(Avsender.LIER_EVERK);
 	}
-	
+
 	public static Builder fraEB() {
 		return forAvsender(Avsender.EB);
 	}
@@ -112,7 +112,7 @@ public class RegningLinje implements Serializable {
 		Builder(Avsender avender) {
 			this.avender = avender;
 		}
-		
+
 		public RegningLinje medSum(double sum) {
 			this.sum = sum;
 			return build();
@@ -122,7 +122,7 @@ public class RegningLinje implements Serializable {
 			this.sum = sum;
 			return this;
 		}
-		
+
 		public RegningLinje build() {
 			return new RegningLinje(this);
 		}

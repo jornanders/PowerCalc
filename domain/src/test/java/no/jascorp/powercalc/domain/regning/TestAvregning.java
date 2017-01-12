@@ -57,7 +57,9 @@ public class TestAvregning {
                 Maaleavlesning.forHybel().dato("26.03.2015").stand(49231).build(),
                 Maaleavlesning.forHybel().dato("09.06.2015").stand(50322).build(),
                 Maaleavlesning.forHybel().dato("06.04.2016").stand(55771).build(),
-                Maaleavlesning.forHybel().dato("31.07.2016").stand(56553).build()
+                Maaleavlesning.forHybel().dato("31.07.2016").stand(56553).build(),
+                Maaleavlesning.forHybel().dato("21.11.2016").stand(57809).build(), //lagt til, men ikke brukt (12.01.17)
+                Maaleavlesning.forHybel().dato("12.01.2017").stand(59074).build()  //lagt til, men ikke brukt (12.01.17)
         );
     }
 
