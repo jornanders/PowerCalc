@@ -76,16 +76,9 @@
     <option name="CODE_STYLE_SCHEME" value="" />
   </component>
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="Javac" />
-    <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
     </wildcardResourcePatterns>
-    <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
-      </profile>
-    </annotationProcessing>
   </component>
   <component name="CopyrightManager" default="" />
   <component name="DependencyValidationManager">
@@ -107,9 +100,11 @@
     <option name="LOG_MESSAGE" />
     <option name="CHECKOUT_AFTER_IMPORT" value="true" />
   </component>
-  <component name="JRebel Project data">
-    <option name="privateKey" value="3082025c0201000281810081ee0928a2919f3e1baf1fc0f593e2c4537b1277801953877ce37c2ff65a78ccfcaf3d6435fc8ac511b94d369de02f9e0d40471a486440ce122ce03a0690b61930d08fabbd2e72637b64921fa32f7f3ca721c1ec130ae421502f1fedded9241abc987a297e0946af6f6ef5319d5950dc6c5a286f10c8e5a649afc679fc891d0502030100010281806ca3281b46dab5a84ba380cc6949aec8f2f82bb7a96f03ad7c9a04c3619bc1f7bbab968c4cab8d283baa914a027569bb205f47544d852dbe5fea0fcdd4a178efa3e148f00182ecc30dd399dd33ab4b4331f08e7ce13067d4c037a7d388ccdfc6facba7df9c913b6ce7e4415eb53f71430ab265a3df695544ee198ad03c693421024100be650c54232e81901690314cc34aba9fef977f0e89a8b830a65180afa07408935a5f4e2ec876727ae1ed6049ecf4e1b4c99164f28a974eb6bdffd546da1f986d024100aeb34e270baa2a584c8023520fc0f7ea5c7361a68258b014b5f91c5320dcd7c04fb989103fb34c42a09bbe117e75a4871aa43f51fcc0dec3640f17c8fb2267f9024038b9182c34f3150c9d7c4603cda704e4c357ca35c5936b94aae85b4377b53a1cd46ed27723a80e4147f015a0d0a4c05dc133bcf4798fcc96ab127e3306a7251d02410090533557707d8e2a105933d4d18afbc533c7667ee6e459e3624a80a9f4563e2f742db51c2563fcb67674f3db03fc308624ee58196593f8f4b6aef959628f9411024035cffb59170d62e03819bfa7bf2de8c72224c780734cef8b8b34ef365864715b90cbc8bb28ccc8ade51dc11ba7ee51274c2c18ba12eaf7252ba76693ce43612f" />
-    <option name="publicKey" value="3081890281810081ee0928a2919f3e1baf1fc0f593e2c4537b1277801953877ce37c2ff65a78ccfcaf3d6435fc8ac511b94d369de02f9e0d40471a486440ce122ce03a0690b61930d08fabbd2e72637b64921fa32f7f3ca721c1ec130ae421502f1fedded9241abc987a297e0946af6f6ef5319d5950dc6c5a286f10c8e5a649afc679fc891d050203010001" />
+  <component name="InspectionProjectProfileManager">
+    <profile version="1.0">
+      <option name="myName" value="Project Default" />
+    </profile>
+    <version value="1.0" />
   </component>
   <component name="JUnitProjectSettings">
     <option name="TEST_RUNNER" value="UI" />
@@ -270,7 +265,7 @@
       <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>

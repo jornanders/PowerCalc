@@ -14,10 +14,10 @@ public class TestMaalepunkt {
 	@Before
 	public void setUp() {
 		maaleavlesninger = new Maaleavlesninger();
-		maaleavlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HOVEDMAALER, "01.01.2011", 0));
-		maaleavlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HOVEDMAALER, "01.02.2011", 1000));
-		maaleavlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HYBELMAALER, "01.01.2011", 0));
-		maaleavlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HYBELMAALER, "01.02.2011", 100));
+		maaleavlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HOVEDMAALER, "01.01.2011", 0, 0 ));
+		maaleavlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HOVEDMAALER, "01.02.2011", 1000, 0));
+		maaleavlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HYBELMAALER, "01.01.2011", 0, 0));
+		maaleavlesninger.addMaaleavlesning(new Maaleavlesning(Maalepunkt.HYBELMAALER, "01.02.2011", 100, 0));
 	}
 	
 	@Test

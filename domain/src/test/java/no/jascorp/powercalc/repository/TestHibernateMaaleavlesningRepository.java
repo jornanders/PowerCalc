@@ -33,7 +33,7 @@ public class TestHibernateMaaleavlesningRepository extends AbstractDatabaseTest 
 	@Test
 	@Transactional
 	public void testSaveMaaleavlesning() {
-		Maaleavlesning maaleavlesning = new Maaleavlesning(Maalepunkt.HOVEDETASJE, stringToDate("29.09.1013"), 120);
+		Maaleavlesning maaleavlesning = new Maaleavlesning(Maalepunkt.HOVEDETASJE, stringToDate("29.09.1013"), 120,0);
 		repository.save(maaleavlesning);
 		assertTrue((maaleavlesning.getAvlesningId()) > 0);
 	}

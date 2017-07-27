@@ -20,6 +20,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
+import com.google.common.base.Preconditions;
 import no.jascorp.powercalc.util.Utils;
 
 import org.hibernate.annotations.Immutable;
@@ -36,7 +37,7 @@ public class Maaleavlesning implements Comparable<Maaleavlesning>, Serializable 
 	
 	private static final long serialVersionUID = -7620353780592322335L;
 
-	public static final Maaleavlesning NULL_AVLESNING = new Maaleavlesning(Maalepunkt.NULL_VALUE, Utils.stringToDate("01.01.1900"), 0); 
+	public static final Maaleavlesning NULL_AVLESNING = new Maaleavlesning(Maalepunkt.NULL_VALUE, Utils.stringToDate("01.01.1900"), 0, 0);
 	
 	@Id
 	@GeneratedValue(generator = "maaleavlesning", strategy = GenerationType.SEQUENCE)
@@ -59,17 +60,23 @@ public class Maaleavlesning implements Comparable<Maaleavlesning>, Serializable 
 	@Min(1)
 	private final int stand;
 
+	@Column(name = "forbruk", nullable = true)
+	@Min(0)
+	private final int forbruk;
+
 	Maaleavlesning() {
 		this.punkt = null;
 		this.dato = null;
 		this.stand = 0;
+		this.forbruk= 0;
 	}
 
-	public Maaleavlesning(Maalepunkt punkt, Date dato, int stand) {
+	public Maaleavlesning(Maalepunkt punkt, Date dato, int stand, int forbruk) {
 		Utils.assertNotNull(punkt, "Målepunkt kan ikke være null");
 		this.punkt = punkt;
 		this.dato = new Date(dato.getTime());
 		this.stand = stand;
+		this.forbruk = forbruk;
 	}
 	
 	public Integer getAvlesningId() {
@@ -80,12 +87,12 @@ public class Maaleavlesning implements Comparable<Maaleavlesning>, Serializable 
 		this.avlesningId = avlesningId;
 	}
 
-	public Maaleavlesning(Maalepunkt punkt, String dato, int stand) {
-		this(punkt, Utils.stringToDate(dato), stand);
+	public Maaleavlesning(Maalepunkt punkt, String dato, int stand, int forbruk) {
+		this(punkt, Utils.stringToDate(dato), stand, forbruk);
 	}
 
 	public Maaleavlesning(Builder builder) {
-		this(builder.maalepunkt, builder.dato, builder.stand);
+		this(builder.maalepunkt, builder.dato, builder.stand, builder.forbruk);
 	}
 
 	public Maalepunkt getPunkt() {
@@ -119,8 +126,12 @@ public class Maaleavlesning implements Comparable<Maaleavlesning>, Serializable 
 		return o.getDato().before(this.getDato()) ? 1 : -1;
 	}
 	
-	public int getForbruk(Maaleavlesning tilAvlesning) {
+	public int beregnForbruk(Maaleavlesning tilAvlesning) {
 		return tilAvlesning.getStand() - getStand();
+	}
+
+	public int getForbruk() {
+		return forbruk;
 	}
 
 	@Override
@@ -162,11 +173,20 @@ public class Maaleavlesning implements Comparable<Maaleavlesning>, Serializable 
 	public static Builder forHoved() {
 		return forPunkt(Maalepunkt.HOVEDMAALER);
 	}
-	
+
+	public static Builder from(Maaleavlesning maaleavlesning) {
+		Builder builder = forPunkt(maaleavlesning.punkt);
+		builder.dato = Utils.dateToString(maaleavlesning.dato);
+		builder.stand = maaleavlesning.stand;
+		builder.forbruk = maaleavlesning.forbruk;
+		return builder;
+	}
+
 	public static class Builder {
 		private final Maalepunkt maalepunkt;
 		private String dato;
 		private int stand;
+		private int forbruk;
 
 		public Builder(Maalepunkt maalepunkt) {
 			this.maalepunkt = maalepunkt;
@@ -179,6 +199,11 @@ public class Maaleavlesning implements Comparable<Maaleavlesning>, Serializable 
 
 		public Builder stand(int stand) {
 			this.stand = stand;
+			return this;
+		}
+
+		public Builder forbruk(int forbruk) {
+			this.forbruk = forbruk;
 			return this;
 		}
 

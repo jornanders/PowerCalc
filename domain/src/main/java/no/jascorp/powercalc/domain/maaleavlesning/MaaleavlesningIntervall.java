@@ -51,8 +51,8 @@ class MaaleavlesningIntervall {
 	}
 
 	double getForbruk() {
-		logger.debug("getForbruk: {}", fraAvlesning.getForbruk(tilAvlesning));
-		return fraAvlesning.getForbruk(tilAvlesning);
+		logger.debug("beregnForbruk: {}", fraAvlesning.beregnForbruk(tilAvlesning));
+		return fraAvlesning.beregnForbruk(tilAvlesning);
 	}
 	
 	double getForbruk(Datointervall intervalToCalculate) {
@@ -66,8 +66,8 @@ class MaaleavlesningIntervall {
 			|| isTilDatoIntervallAfterMaalingAndIsLast(intervalToCalculate)
 			|| getAvlesningDatointervall().isDateInRange(intervalToCalculate.getTilDato()) ? intervalToCalculate.getTilDato() : getAvlesningDatointervall().getTilDato();
 		intervalToCalculate = new Datointervall(fraDato, tilDato);
-		double forbruk = ((double)fraAvlesning.getForbruk(tilAvlesning) / avlesningIntervall.getAntallDagerForIntervall()) * (intervalToCalculate.getAntallDagerForIntervall());
-		logger.debug("getForbruk: " + fraAvlesning.getForbruk(tilAvlesning) + " / " + avlesningIntervall.getAntallDagerForIntervall() + " * " + intervalToCalculate + " : kWh " + forbruk);
+		double forbruk = ((double)fraAvlesning.beregnForbruk(tilAvlesning) / avlesningIntervall.getAntallDagerForIntervall()) * (intervalToCalculate.getAntallDagerForIntervall());
+		logger.debug("beregnForbruk: " + fraAvlesning.beregnForbruk(tilAvlesning) + " / " + avlesningIntervall.getAntallDagerForIntervall() + " * " + intervalToCalculate + " : kWh " + forbruk);
 		return forbruk;
 	}
 	

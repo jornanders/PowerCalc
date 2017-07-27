@@ -2,8 +2,10 @@ package no.jascorp.powercalc.domain.maaleavlesning;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 
 import no.jascorp.powercalc.domain.common.Datointervall;
 
@@ -33,9 +35,25 @@ public class Maaleavlesninger {
 		LinkedList<Maaleavlesning> avlesninger = getAvlesningerForMaalepunkt(maaleavlesning.getPunkt());
 		avlesninger.add(maaleavlesning);
 		Collections.sort(avlesninger);
+		updateStands(avlesninger);
+		Collections.sort(avlesninger);
 		assureStandIsIncreasing(avlesninger);
 	}
-	
+
+	private void updateStands(LinkedList<Maaleavlesning> avlesninger) {
+		for (int i = 1; i < avlesninger.size(); i++) {
+			Maaleavlesning current = avlesninger.get(i);
+			Maaleavlesning forrige = avlesninger.get(i-1);
+			if (forrige != null && current.getStand() == 0) {
+				int stand = forrige.getStand() + current.getForbruk();
+				current = Maaleavlesning.from(current).stand(stand).build();
+				Logger.getLogger(getClass()).debug("Update stand to " + stand + " for " + current);
+				avlesninger.remove(i);
+				avlesninger.add(i, current);
+			}
+		}
+	}
+
 	private LinkedList<Maaleavlesning> getAvlesningerForMaalepunkt(Maalepunkt maalepunkt) {
 		if (!maaleavlesninger.containsKey(maalepunkt)) {
 			maaleavlesninger.put(maalepunkt, new LinkedList<Maaleavlesning>());
