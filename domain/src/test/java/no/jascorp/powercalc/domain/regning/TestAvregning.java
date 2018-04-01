@@ -59,11 +59,14 @@ public class TestAvregning {
                 Maaleavlesning.forHybel().dato("09.06.2015").stand(50322).build(),
                 Maaleavlesning.forHybel().dato("06.04.2016").stand(55771).build(),
                 Maaleavlesning.forHybel().dato("31.07.2016").stand(56553).build(),
-                Maaleavlesning.forHybel().dato("21.11.2016").stand(57809).build(), //lagt til, men ikke brukt (12.01.17)
-                Maaleavlesning.forHybel().dato("12.01.2017").stand(59074).build(),  //lagt til, men ikke brukt (12.01.17)
-                Maaleavlesning.forHybel().dato("01.04.2017").stand(61048).build(),  //lagt til, men ikke brukt (12.01.17)
-                Maaleavlesning.forHybel().dato("26.05.2017").stand(61925).build(),  //lagt til, men ikke brukt (12.01.17)
-                Maaleavlesning.forHybel().dato("26.07.2017").stand(62111).build()  //lagt til, men ikke brukt (12.01.17)
+                Maaleavlesning.forHybel().dato("21.11.2016").stand(57809).build(),
+                Maaleavlesning.forHybel().dato("12.01.2017").stand(59074).build(),
+                Maaleavlesning.forHybel().dato("01.04.2017").stand(61048).build(),
+                Maaleavlesning.forHybel().dato("26.05.2017").stand(61925).build(),
+                Maaleavlesning.forHybel().dato("26.07.2017").stand(62111).build(),
+                Maaleavlesning.forHybel().dato("13.12.2017").stand(63928).build(),
+                Maaleavlesning.forHybel().dato("05.02.2018").stand(65464).build(),
+                Maaleavlesning.forHybel().dato("18.03.2018").stand(66619).build()
         );
     }
 
@@ -148,7 +151,15 @@ public class TestAvregning {
                 Maaleavlesning.forHoved().dato("01.04.2017").forbruk(3392).build(),
                 Maaleavlesning.forHoved().dato("01.05.2017").forbruk(2894).build(),
                 Maaleavlesning.forHoved().dato("01.06.2017").forbruk(2208).build(),
-                Maaleavlesning.forHoved().dato("01.07.2017").forbruk(1699).build()
+                Maaleavlesning.forHoved().dato("01.07.2017").forbruk(1699).build(),
+                Maaleavlesning.forHoved().dato("01.08.2017").forbruk(1245).build(),
+                Maaleavlesning.forHoved().dato("01.09.2017").forbruk(1664).build(),
+                Maaleavlesning.forHoved().dato("01.10.2017").forbruk(1935).build(),
+                Maaleavlesning.forHoved().dato("01.11.2017").forbruk(2644).build(),
+                Maaleavlesning.forHoved().dato("01.12.2017").forbruk(3465).build(),
+                Maaleavlesning.forHoved().dato("01.01.2018").forbruk(5135).build(),
+                Maaleavlesning.forHoved().dato("01.02.2018").forbruk(5434).build(),
+                Maaleavlesning.forHoved().dato("01.03.2018").forbruk(4786).build()
         );
     }
 
@@ -205,6 +216,102 @@ public class TestAvregning {
     }
 
     @Test
+    public void testAvregningFebruar2018() {
+        Avregning avregning = Regning
+                .fra("01.02.2018").til("01.03.2018")
+                .linje(fraGlitreStrøm().medSum(2445.54))
+                .linje(fraGlitreNett().medSum(2511.75))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(818.14, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 818.14, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningJanuar2018() {
+        Avregning avregning = Regning
+                .fra("01.01.2018").til("01.02.2018")
+                .linje(fraGlitreStrøm().medSum(2379.28))
+                .linje(fraGlitreNett().medSum(2827.14))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(844.85, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 844.85, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningDesember2017() {
+        Avregning avregning = Regning
+                .fra("01.12.2017").til("01.01.2018")
+                .linje(fraGlitreStrøm().medSum(2166.49))
+                .linje(fraGlitreNett().medSum(2670.21))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(655.74, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 655.74, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningNovember2017() {
+        Avregning avregning = Regning
+                .fra("01.11.2017").til("01.12.2017")
+                .linje(fraGlitreStrøm().medSum(1439.54))
+                .linje(fraGlitreNett().medSum(1836.40))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(368.11, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 368.11, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningOktober2017() {
+        Avregning avregning = Regning
+                .fra("01.10.2017").til("01.11.2017")
+                .linje(fraGlitreStrøm().medSum(969.89))
+                .linje(fraGlitreNett().medSum(1363.47))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(355.07, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 355.07, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningSeptember2017() {
+        Avregning avregning = Regning
+                .fra("01.09.2017").til("01.10.2017")
+                .linje(fraGlitreStrøm().medSum(771.20))
+                .linje(fraGlitreNett().medSum(1028.68))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(362.17, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 362.17, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningAugust2017() {
+        Avregning avregning = Regning
+                .fra("01.08.2017").til("01.09.2017")
+                .linje(fraGlitreStrøm().medSum(605.09))
+                .linje(fraGlitreNett().medSum(896.00))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(362.95, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 362.95, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningJuli2017() {
+        Avregning avregning = Regning
+                .fra("01.07.2017").til("01.08.2017")
+                .linje(fraGlitreStrøm().medSum(458.41))
+                .linje(fraGlitreNett().medSum(699.66))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(143.34, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 143.34, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
     public void testAvregningJuni2017() throws Exception {
         Avregning avregning = Regning
                 .fra("01.06.2017").til("01.07.2017")
@@ -224,8 +331,8 @@ public class TestAvregning {
                 .linje(fraGlitreNett().medSum(1105.37))
                 .medAvlesninger(maaleavlesninger);
 
-        assertEquals(484.75, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
-        assertEquals(avregning.getRegning().getSum() - 484.75, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+        assertEquals(367.11, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 367.11, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
     }
 
     @Test
