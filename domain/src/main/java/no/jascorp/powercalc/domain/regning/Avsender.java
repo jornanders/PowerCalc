@@ -9,5 +9,6 @@ public enum Avsender {
 	LIER_EVERK,
 	GLITRE_NETT,
 	GLITRE_STRØM,
+	TIBBER,
 	;
 }

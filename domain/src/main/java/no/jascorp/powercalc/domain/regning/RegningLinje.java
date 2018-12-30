@@ -101,6 +101,10 @@ public class RegningLinje implements Serializable {
 		return forAvsender(Avsender.GLITRE_STRØM);
 	}
 
+	public static Builder fraTibber() {
+		return forAvsender(Avsender.TIBBER);
+	}
+
 	public static Builder fraGlitreNett() {
 		return forAvsender(Avsender.GLITRE_NETT);
 	}
