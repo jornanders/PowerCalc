@@ -65,7 +65,12 @@ public class TestAvregning {
                 Maaleavlesning.forHybel().dato("05.02.2018").stand(65464).build(),
                 Maaleavlesning.forHybel().dato("18.03.2018").stand(66619).build(),
                 Maaleavlesning.forHybel().dato("16.12.2018").stand(69157).build(),
-                Maaleavlesning.forHybel().dato("30.12.2018").stand(69564).build()
+                Maaleavlesning.forHybel().dato("30.12.2018").stand(69564).build(),
+                Maaleavlesning.forHybel().dato("15.01.2019").stand(70103).build(),
+                Maaleavlesning.forHybel().dato("04.03.2019").stand(71601).build(),
+                Maaleavlesning.forHybel().dato("20.03.2019").stand(72037).build(),
+                Maaleavlesning.forHybel().dato("15.06.2019").stand(73183).build(),
+                Maaleavlesning.forHybel().dato("25.12.2019").stand(76085).build()
         );
     }
 
@@ -169,7 +174,20 @@ public class TestAvregning {
                 Maaleavlesning.forHoved().dato("01.10.2018").forbruk(2252).build(),
                 Maaleavlesning.forHoved().dato("01.11.2018").forbruk(3057).build(),
                 Maaleavlesning.forHoved().dato("01.12.2018").forbruk(4042).build(),
-                Maaleavlesning.forHoved().dato("30.12.2018").forbruk(4883).build()
+                Maaleavlesning.forHoved().dato("30.12.2018").forbruk(4883).build(),
+
+                Maaleavlesning.forHoved().dato("01.02.2019").forbruk(5737).build(),
+                Maaleavlesning.forHoved().dato("01.03.2019").forbruk(4527).build(),
+                Maaleavlesning.forHoved().dato("01.04.2019").forbruk(4252).build(),
+                Maaleavlesning.forHoved().dato("01.05.2019").forbruk(2809).build(),
+                Maaleavlesning.forHoved().dato("01.06.2019").forbruk(2601).build(),
+                Maaleavlesning.forHoved().dato("01.07.2019").forbruk(1960).build(),
+                Maaleavlesning.forHoved().dato("01.08.2019").forbruk(1605).build(),
+                Maaleavlesning.forHoved().dato("01.09.2019").forbruk(1822).build(),
+                Maaleavlesning.forHoved().dato("01.10.2019").forbruk(2208).build(),
+                Maaleavlesning.forHoved().dato("01.11.2019").forbruk(3420).build(),
+                Maaleavlesning.forHoved().dato("01.12.2019").forbruk(4094).build(),
+                Maaleavlesning.forHoved().dato("30.12.2019").forbruk(4654).build()
         );
     }
 
@@ -225,6 +243,152 @@ public class TestAvregning {
 
     }
 
+
+    @Test
+    public void testAvregningDesember2019() {
+        Avregning avregning = Regning
+                .fra("01.12.2019").til("01.01.2020")
+                .linje(fraGlitreStrøm().medSum(2954))
+                .linje(fraGlitreNett().medSum(2391))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(500.79, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 500.79, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+
+    @Test
+    public void testAvregningNovember2019() {
+        Avregning avregning = Regning
+                .fra("01.11.2019").til("01.12.2019")
+                .linje(fraGlitreStrøm().medSum(2900))
+                .linje(fraGlitreNett().medSum(2122))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(553.34, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 553.34, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningOktober2019() {
+        Avregning avregning = Regning
+                .fra("01.10.2019").til("01.11.2019")
+                .linje(fraGlitreStrøm().medSum(2190))
+                .linje(fraGlitreNett().medSum(1793))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(542.86, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 542.86, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningSeptember2019() {
+        Avregning avregning = Regning
+                .fra("01.09.2019").til("01.10.2019")
+                .linje(fraGlitreStrøm().medSum(1210))
+                .linje(fraGlitreNett().medSum(1142))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(480.51, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 480.51, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningAugust2019() {
+        Avregning avregning = Regning
+                .fra("01.08.2019").til("01.09.2019")
+                .linje(fraGlitreStrøm().medSum(1065))
+                .linje(fraGlitreNett().medSum(964))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(519.08, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 519.08, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningJuli2019() {
+        Avregning avregning = Regning
+                .fra("01.07.2019").til("01.08.2019")
+                .linje(fraGlitreStrøm().medSum(914))
+                .linje(fraGlitreNett().medSum(862))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(515.79, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 515.79, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningJuni2019() {
+        Avregning avregning = Regning
+                .fra("01.06.2019").til("01.07.2019")
+                .linje(fraGlitreStrøm().medSum(996))
+                .linje(fraGlitreNett().medSum(1025))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(438.22, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 438.22, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningMai2019() {
+        Avregning avregning = Regning
+                .fra("01.05.2019").til("01.06.2019")
+                .linje(fraGlitreStrøm().medSum(1560))
+                .linje(fraGlitreNett().medSum(1327))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(453.25, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 453.25, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningApril2019() {
+        Avregning avregning = Regning
+                .fra("01.04.2019").til("01.05.2019")
+                .linje(fraGlitreStrøm().medSum(1732))
+                .linje(fraGlitreNett().medSum(1425))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(444.13, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 444.13, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningMars2019() {
+        Avregning avregning = Regning
+                .fra("01.03.2019").til("01.04.2019")
+                .linje(fraGlitreStrøm().medSum(2709))
+                .linje(fraGlitreNett().medSum(2212))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(795.89, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 795.89, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningFebruar2019() {
+        Avregning avregning = Regning
+                .fra("01.02.2019").til("01.03.2019")
+                .linje(fraGlitreStrøm().medSum(3125))
+                .linje(fraGlitreNett().medSum(2329))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(1052.77, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 1052.77, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningJanuar2019() {
+        Avregning avregning = Regning
+                .fra("15.01.2019").til("01.02.2019")
+                .linje(fraGlitreStrøm().medSum(4499 / 2)) //deler på 2 fordi summen kun gjelder halve måneden
+                .linje(fraGlitreNett().medSum(2936 / 2))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(667.25, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 667.25, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
     @Test
     public void testAvregningDesember2018() {
         Avregning avregning = Regning
@@ -233,8 +397,8 @@ public class TestAvregning {
                 .linje(fraGlitreNett().medSum(2517))
                 .medAvlesninger(maaleavlesninger);
 
-        assertEquals(695.20, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
-        assertEquals(avregning.getRegning().getSum() - 695.20, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+        assertEquals(704.34, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 704.34, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
     }
 
     @Test
