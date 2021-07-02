@@ -81,7 +81,14 @@ public class TestAvregning {
                 Maaleavlesning.forHybel().dato("01.09.2020").stand(79517).build(),
                 Maaleavlesning.forHybel().dato("02.10.2020").stand(79715).build(),
                 Maaleavlesning.forHybel().dato("01.11.2020").stand(80038).build(),
-                Maaleavlesning.forHybel().dato("03.12.2020").stand(80520).build()
+                Maaleavlesning.forHybel().dato("03.12.2020").stand(80520).build(),
+                Maaleavlesning.forHybel().dato("08.01.2021").stand(81240).build(),
+                Maaleavlesning.forHybel().dato("01.02.2021").stand(82006).build(),
+                Maaleavlesning.forHybel().dato("01.03.2021").stand(82846).build(),
+                Maaleavlesning.forHybel().dato("09.04.2021").stand(83580).build(),
+                Maaleavlesning.forHybel().dato("11.05.2021").stand(84094).build(),
+                Maaleavlesning.forHybel().dato("01.06.2021").stand(84325).build(),
+                Maaleavlesning.forHybel().dato("15.06.2021").stand(84436).build()
         );
     }
 
@@ -210,8 +217,13 @@ public class TestAvregning {
                 Maaleavlesning.forHoved().dato("01.09.2020").forbruk(1710).build(),
                 Maaleavlesning.forHoved().dato("01.10.2020").forbruk(1943).build(),
                 Maaleavlesning.forHoved().dato("01.11.2020").forbruk(2816).build(),
-                Maaleavlesning.forHoved().dato("01.12.2020").forbruk(3292).build()
-                //Maaleavlesning.forHoved().dato("01.12.2020").forbruk(3485).build()
+                Maaleavlesning.forHoved().dato("01.12.2020").forbruk(3292).build(),
+                Maaleavlesning.forHoved().dato("01.01.2021").forbruk(4144).build(),
+                Maaleavlesning.forHoved().dato("01.02.2021").forbruk(5471).build(),
+                Maaleavlesning.forHoved().dato("01.03.2021").forbruk(4932).build(),
+                Maaleavlesning.forHoved().dato("01.04.2021").forbruk(3651).build(),
+                Maaleavlesning.forHoved().dato("01.05.2021").forbruk(2998).build(),
+                Maaleavlesning.forHoved().dato("01.06.2021").forbruk(2841).build()
         );
     }
 
@@ -265,6 +277,90 @@ public class TestAvregning {
         assertEquals(2243.80d, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
         assertEquals(avregning.getRegning().getSum() - 2243.80, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
 
+    }
+
+    @Test
+    public void testAvregningJuni2021() {
+        Avregning avregning = Regning
+                .fra("01.06.2021").til("16.06.2021")
+                .linje(fraGlitreStrøm().medSum(1519/2))
+                .linje(fraGlitreNett().medSum(983/2))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(108.14, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 108.14, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningMai2021() {
+        Avregning avregning = Regning
+                .fra("01.05.2021").til("01.06.2021")
+                .linje(fraGlitreStrøm().medSum(2113))
+                .linje(fraGlitreNett().medSum(1262))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(465.24, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 465.24, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningApril2021() {
+        Avregning avregning = Regning
+                .fra("01.04.2021").til("01.05.2021")
+                .linje(fraGlitreStrøm().medSum(2116))
+                .linje(fraGlitreNett().medSum(1306))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(575.21, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 575.21, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningMars2021() {
+        Avregning avregning = Regning
+                .fra("01.03.2021").til("01.04.2021")
+                .linje(fraGlitreStrøm().medSum(2395))
+                .linje(fraGlitreNett().medSum(1700))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(654.39, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 654.39, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningFebruar2021() {
+        Avregning avregning = Regning
+                .fra("01.02.2021").til("01.03.2021")
+                .linje(fraGlitreStrøm().medSum(4285))
+                .linje(fraGlitreNett().medSum(2234))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(1110.29, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 1110.29, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningJanuar2021() {
+        Avregning avregning = Regning
+                .fra("01.01.2021").til("01.02.2021")
+                .linje(fraGlitreStrøm().medSum(4287))
+                .linje(fraGlitreNett().medSum(2478))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(1120.29, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 1120.29, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningDesember2020() {
+        Avregning avregning = Regning
+                .fra("01.12.2020").til("01.01.2021")
+                .linje(fraGlitreStrøm().medSum(1632))
+                .linje(fraGlitreNett().medSum(2016))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(537.10, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 537.10, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
     }
 
     @Test
