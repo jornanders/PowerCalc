@@ -573,8 +573,9 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
-  <component name="RunManager" selected="JUnit.TestAvregning.testAvregningMars2020">
+  <component name="RunManager" selected="JUnit.TestAvregning.testAvregningNovember2021">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -913,7 +914,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method v="2" />
     </configuration>
-    <configuration name="TestAvregning.testAvregningAugust2020" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningAugust2021" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -923,7 +924,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningAugust2020" />
+      <option name="METHOD_NAME" value="testAvregningAugust2021" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -934,7 +935,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningMars2020" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningJuni2021" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -944,7 +945,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningMars2020" />
+      <option name="METHOD_NAME" value="testAvregningJuni2021" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -955,7 +956,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningNovember2020" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningNovember2021" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -965,7 +966,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningNovember2020" />
+      <option name="METHOD_NAME" value="testAvregningNovember2021" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -976,7 +977,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningOktober2020" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningOktober2021" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -986,7 +987,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningOktober2020" />
+      <option name="METHOD_NAME" value="testAvregningOktober2021" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -997,7 +998,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningSeptember2020" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningSeptember2021" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -1007,7 +1008,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningSeptember2020" />
+      <option name="METHOD_NAME" value="testAvregningSeptember2021" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1025,19 +1026,6 @@
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="wholeProject" />
       </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="domain" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -1096,19 +1084,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestAvregning.testAvregningAugust2020" />
-      <item itemvalue="JUnit.TestAvregning.testAvregningSeptember2020" />
-      <item itemvalue="JUnit.TestAvregning.testAvregningOktober2020" />
-      <item itemvalue="JUnit.TestAvregning.testAvregningNovember2020" />
-      <item itemvalue="JUnit.TestAvregning.testAvregningMars2020" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningJuni2021" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningAugust2021" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningSeptember2021" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningOktober2021" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningNovember2021" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestAvregning.testAvregningMars2020" />
-        <item itemvalue="JUnit.TestAvregning.testAvregningNovember2020" />
-        <item itemvalue="JUnit.TestAvregning.testAvregningOktober2020" />
-        <item itemvalue="JUnit.TestAvregning.testAvregningSeptember2020" />
-        <item itemvalue="JUnit.TestAvregning.testAvregningAugust2020" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningNovember2021" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningOktober2021" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningSeptember2021" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningAugust2021" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningJuni2021" />
       </list>
     </recent_temporary>
   </component>
@@ -1155,7 +1143,11 @@
       <workItem from="1501158455872" duration="9804000" />
       <workItem from="1522603331519" duration="7169000" />
       <workItem from="1546179737190" duration="6762000" />
-      <workItem from="1609080471946" duration="5592000" />
+      <workItem from="1609080471946" duration="7256000" />
+      <workItem from="1611491543121" duration="1008000" />
+      <workItem from="1612510833415" duration="79000" />
+      <workItem from="1625228572264" duration="2890000" />
+      <workItem from="1641146099530" duration="4402000" />
     </task>
     <servers />
   </component>
@@ -1322,6 +1314,10 @@
   </component>
   <component name="WebViewSettings">
     <webview flattenPackages="false" showMembers="false" autoscrollToSource="false" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
