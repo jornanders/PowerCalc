@@ -70,7 +70,7 @@
         </element>
       </root>
     </artifact>
-    <artifact type="war" name="web:war">
+    <artifact type="war" external-system-id="Maven" name="web:war">
       <output-path>$PROJECT_DIR$/web/target</output-path>
       <properties id="maven-jee-properties">
         <options>
@@ -82,7 +82,7 @@
         <element id="artifact" artifact-name="web:war exploded" />
       </root>
     </artifact>
-    <artifact type="exploded-war" name="web:war exploded">
+    <artifact type="exploded-war" external-system-id="Maven" name="web:war exploded">
       <output-path>$PROJECT_DIR$/web/target/web-1.0-SNAPSHOT</output-path>
       <properties id="maven-jee-properties">
         <options>
@@ -159,7 +159,7 @@
         <element id="directory" name="META-INF">
           <element id="file-copy" path="$PROJECT_DIR$/web/target/web-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
         </element>
-        <element id="javaee-facet-resources" facet="web/web/web" />
+        <element id="javaee-facet-resources" facet="web/web/Web" />
       </root>
     </artifact>
   </component>
@@ -195,6 +195,8 @@
     <file url="file://$PROJECT_DIR$/domain" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/domain/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/src/main/resources" charset="UTF-8" />
@@ -204,6 +206,7 @@
     <option name="OPEN_IN_BROWSER" value="false" />
     <option name="OUTPUT_DIRECTORY" />
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/web" />
   </component>
@@ -386,7 +389,7 @@
       <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
       <option name="id" value="central" />
@@ -404,14 +407,14 @@
       <option name="url" value="https://repo1.maven.org/maven2" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="jboss.community" />
-      <option name="name" value="JBoss Community repository" />
-      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
-    </remote-repository>
-    <remote-repository>
       <option name="id" value="com.springsource.repository.bundles.external" />
       <option name="name" value="SpringSource Enterprise Bundle Repository - External Bundle&#10;&#9;&#9;&#9;&#9;Releases" />
       <option name="url" value="http://repository.springsource.com/maven/bundles/external" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="com.springsource.repository.bundles.release" />
@@ -423,7 +426,8 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
   <component name="libraryTable">
-    <library name="Maven: ant:ant:1.6.5">
+    <library name="Maven: ant:ant:1.6.5" type="java-imported" external-system-id="Maven">
+      <properties groupId="ant" artifactId="ant" version="1.6.5" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/ant/ant/1.6.5/ant-1.6.5.jar!/" />
       </CLASSES>
@@ -434,7 +438,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/ant/ant/1.6.5/ant-1.6.5-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: antlr:antlr:2.7.7">
+    <library name="Maven: antlr:antlr:2.7.7" type="java-imported" external-system-id="Maven">
+      <properties groupId="antlr" artifactId="antlr" version="2.7.7" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/antlr/antlr/2.7.7/antlr-2.7.7.jar!/" />
       </CLASSES>
@@ -445,7 +450,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/antlr/antlr/2.7.7/antlr-2.7.7-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: aopalliance:aopalliance:1.0">
+    <library name="Maven: aopalliance:aopalliance:1.0" type="java-imported" external-system-id="Maven">
+      <properties groupId="aopalliance" artifactId="aopalliance" version="1.0" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/" />
       </CLASSES>
@@ -456,7 +462,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: asm:asm:3.3.1">
+    <library name="Maven: asm:asm:3.3.1" type="java-imported" external-system-id="Maven">
+      <properties groupId="asm" artifactId="asm" version="3.3.1" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/asm/asm/3.3.1/asm-3.3.1.jar!/" />
       </CLASSES>
@@ -467,7 +474,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/asm/asm/3.3.1/asm-3.3.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: cglib:cglib-nodep:2.2.2">
+    <library name="Maven: cglib:cglib-nodep:2.2.2" type="java-imported" external-system-id="Maven">
+      <properties groupId="cglib" artifactId="cglib-nodep" version="2.2.2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2.jar!/" />
       </CLASSES>
@@ -478,7 +486,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: cglib:cglib:2.2.2">
+    <library name="Maven: cglib:cglib:2.2.2" type="java-imported" external-system-id="Maven">
+      <properties groupId="cglib" artifactId="cglib" version="2.2.2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/cglib/cglib/2.2.2/cglib-2.2.2.jar!/" />
       </CLASSES>
@@ -489,7 +498,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/cglib/cglib/2.2.2/cglib-2.2.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: com.google.guava:guava:14.0.1">
+    <library name="Maven: com.google.guava:guava:14.0.1" type="java-imported" external-system-id="Maven">
+      <properties groupId="com.google.guava" artifactId="guava" version="14.0.1" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/14.0.1/guava-14.0.1.jar!/" />
       </CLASSES>
@@ -500,7 +510,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/14.0.1/guava-14.0.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: com.h2database:h2:1.3.164">
+    <library name="Maven: com.h2database:h2:1.3.164" type="java-imported" external-system-id="Maven">
+      <properties groupId="com.h2database" artifactId="h2" version="1.3.164" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/com/h2database/h2/1.3.164/h2-1.3.164.jar!/" />
       </CLASSES>
@@ -511,7 +522,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/com/h2database/h2/1.3.164/h2-1.3.164-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: commons-beanutils:commons-beanutils:1.8.0">
+    <library name="Maven: commons-beanutils:commons-beanutils:1.8.0" type="java-imported" external-system-id="Maven">
+      <properties groupId="commons-beanutils" artifactId="commons-beanutils" version="1.8.0" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar!/" />
       </CLASSES>
@@ -522,7 +534,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: commons-collections:commons-collections:3.2.1">
+    <library name="Maven: commons-collections:commons-collections:3.2.1" type="java-imported" external-system-id="Maven">
+      <properties groupId="commons-collections" artifactId="commons-collections" version="3.2.1" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar!/" />
       </CLASSES>
@@ -533,7 +546,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: commons-digester:commons-digester:2.0">
+    <library name="Maven: commons-digester:commons-digester:2.0" type="java-imported" external-system-id="Maven">
+      <properties groupId="commons-digester" artifactId="commons-digester" version="2.0" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/commons-digester/commons-digester/2.0/commons-digester-2.0.jar!/" />
       </CLASSES>
@@ -544,7 +558,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-digester/commons-digester/2.0/commons-digester-2.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: commons-logging:commons-logging:1.1.1">
+    <library name="Maven: commons-logging:commons-logging:1.1.1" type="java-imported" external-system-id="Maven">
+      <properties groupId="commons-logging" artifactId="commons-logging" version="1.1.1" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar!/" />
       </CLASSES>
@@ -555,7 +570,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dom4j:dom4j:1.6.1">
+    <library name="Maven: dom4j:dom4j:1.6.1" type="java-imported" external-system-id="Maven">
+      <properties groupId="dom4j" artifactId="dom4j" version="1.6.1" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/" />
       </CLASSES>
@@ -566,7 +582,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: javax.servlet:javax.servlet-api:3.0.1">
+    <library name="Maven: javax.servlet:javax.servlet-api:3.0.1" type="java-imported" external-system-id="Maven">
+      <properties groupId="javax.servlet" artifactId="javax.servlet-api" version="3.0.1" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar!/" />
       </CLASSES>
@@ -577,7 +594,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: javax.servlet:jstl:1.2">
+    <library name="Maven: javax.servlet:jstl:1.2" type="java-imported" external-system-id="Maven">
+      <properties groupId="javax.servlet" artifactId="jstl" version="1.2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jstl/1.2/jstl-1.2.jar!/" />
       </CLASSES>
@@ -588,7 +606,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jstl/1.2/jstl-1.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: javax.validation:validation-api:1.0.0.GA">
+    <library name="Maven: javax.validation:validation-api:1.0.0.GA" type="java-imported" external-system-id="Maven">
+      <properties groupId="javax.validation" artifactId="validation-api" version="1.0.0.GA" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar!/" />
       </CLASSES>
@@ -599,7 +618,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: junit-addons:junit-addons:1.4">
+    <library name="Maven: junit-addons:junit-addons:1.4" type="java-imported" external-system-id="Maven">
+      <properties groupId="junit-addons" artifactId="junit-addons" version="1.4" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/junit-addons/junit-addons/1.4/junit-addons-1.4.jar!/" />
       </CLASSES>
@@ -610,7 +630,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/junit-addons/junit-addons/1.4/junit-addons-1.4-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: junit:junit:4.10">
+    <library name="Maven: junit:junit:4.10" type="java-imported" external-system-id="Maven">
+      <properties groupId="junit" artifactId="junit" version="4.10" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/" />
       </CLASSES>
@@ -621,7 +642,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: log4j:log4j:1.2.16">
+    <library name="Maven: log4j:log4j:1.2.16" type="java-imported" external-system-id="Maven">
+      <properties groupId="log4j" artifactId="log4j" version="1.2.16" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.16/log4j-1.2.16.jar!/" />
       </CLASSES>
@@ -632,7 +654,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.16/log4j-1.2.16-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.tiles:tiles-api:2.2.2">
+    <library name="Maven: org.apache.tiles:tiles-api:2.2.2" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.apache.tiles" artifactId="tiles-api" version="2.2.2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/tiles/tiles-api/2.2.2/tiles-api-2.2.2.jar!/" />
       </CLASSES>
@@ -643,7 +666,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/tiles/tiles-api/2.2.2/tiles-api-2.2.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.tiles:tiles-core:2.2.2">
+    <library name="Maven: org.apache.tiles:tiles-core:2.2.2" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.apache.tiles" artifactId="tiles-core" version="2.2.2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/tiles/tiles-core/2.2.2/tiles-core-2.2.2.jar!/" />
       </CLASSES>
@@ -654,7 +678,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/tiles/tiles-core/2.2.2/tiles-core-2.2.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.tiles:tiles-jsp:2.2.2">
+    <library name="Maven: org.apache.tiles:tiles-jsp:2.2.2" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.apache.tiles" artifactId="tiles-jsp" version="2.2.2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/tiles/tiles-jsp/2.2.2/tiles-jsp-2.2.2.jar!/" />
       </CLASSES>
@@ -665,7 +690,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/tiles/tiles-jsp/2.2.2/tiles-jsp-2.2.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.tiles:tiles-servlet:2.2.2">
+    <library name="Maven: org.apache.tiles:tiles-servlet:2.2.2" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.apache.tiles" artifactId="tiles-servlet" version="2.2.2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/tiles/tiles-servlet/2.2.2/tiles-servlet-2.2.2.jar!/" />
       </CLASSES>
@@ -676,7 +702,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/tiles/tiles-servlet/2.2.2/tiles-servlet-2.2.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.tiles:tiles-template:2.2.2">
+    <library name="Maven: org.apache.tiles:tiles-template:2.2.2" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.apache.tiles" artifactId="tiles-template" version="2.2.2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/tiles/tiles-template/2.2.2/tiles-template-2.2.2.jar!/" />
       </CLASSES>
@@ -687,7 +714,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/tiles/tiles-template/2.2.2/tiles-template-2.2.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.aspectj:aspectjrt:1.6.12">
+    <library name="Maven: org.aspectj:aspectjrt:1.6.12" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.aspectj" artifactId="aspectjrt" version="1.6.12" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.6.12/aspectjrt-1.6.12.jar!/" />
       </CLASSES>
@@ -698,7 +726,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.6.12/aspectjrt-1.6.12-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.4">
+    <library name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.4" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.codehaus.jackson" artifactId="jackson-core-asl" version="1.9.4" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar!/" />
       </CLASSES>
@@ -709,7 +738,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.4">
+    <library name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.4" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.codehaus.jackson" artifactId="jackson-mapper-asl" version="1.9.4" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar!/" />
       </CLASSES>
@@ -720,7 +750,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.dbunit:dbunit:2.4.8">
+    <library name="Maven: org.dbunit:dbunit:2.4.8" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.dbunit" artifactId="dbunit" version="2.4.8" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/dbunit/dbunit/2.4.8/dbunit-2.4.8.jar!/" />
       </CLASSES>
@@ -731,7 +762,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/dbunit/dbunit/2.4.8/dbunit-2.4.8-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.eclipse.jdt.core.compiler:ecj:3.5.1">
+    <library name="Maven: org.eclipse.jdt.core.compiler:ecj:3.5.1" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.eclipse.jdt.core.compiler" artifactId="ecj" version="3.5.1" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/core/compiler/ecj/3.5.1/ecj-3.5.1.jar!/" />
       </CLASSES>
@@ -742,7 +774,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/core/compiler/ecj/3.5.1/ecj-3.5.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.eclipse.jetty.orbit:javax.servlet:3.0.0.v201112011016">
+    <library name="Maven: org.eclipse.jetty.orbit:javax.servlet:3.0.0.v201112011016" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.eclipse.jetty.orbit" artifactId="javax.servlet" version="3.0.0.v201112011016" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016.jar!/" />
       </CLASSES>
@@ -753,7 +786,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.eclipse.jetty:jetty-continuation:8.1.1.v20120215">
+    <library name="Maven: org.eclipse.jetty:jetty-continuation:8.1.1.v20120215" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.eclipse.jetty" artifactId="jetty-continuation" version="8.1.1.v20120215" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-continuation/8.1.1.v20120215/jetty-continuation-8.1.1.v20120215.jar!/" />
       </CLASSES>
@@ -764,7 +798,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-continuation/8.1.1.v20120215/jetty-continuation-8.1.1.v20120215-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.eclipse.jetty:jetty-http:8.1.1.v20120215">
+    <library name="Maven: org.eclipse.jetty:jetty-http:8.1.1.v20120215" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.eclipse.jetty" artifactId="jetty-http" version="8.1.1.v20120215" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-http/8.1.1.v20120215/jetty-http-8.1.1.v20120215.jar!/" />
       </CLASSES>
@@ -775,7 +810,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-http/8.1.1.v20120215/jetty-http-8.1.1.v20120215-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.eclipse.jetty:jetty-io:8.1.1.v20120215">
+    <library name="Maven: org.eclipse.jetty:jetty-io:8.1.1.v20120215" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.eclipse.jetty" artifactId="jetty-io" version="8.1.1.v20120215" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-io/8.1.1.v20120215/jetty-io-8.1.1.v20120215.jar!/" />
       </CLASSES>
@@ -786,7 +822,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-io/8.1.1.v20120215/jetty-io-8.1.1.v20120215-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.eclipse.jetty:jetty-security:8.1.1.v20120215">
+    <library name="Maven: org.eclipse.jetty:jetty-security:8.1.1.v20120215" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.eclipse.jetty" artifactId="jetty-security" version="8.1.1.v20120215" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-security/8.1.1.v20120215/jetty-security-8.1.1.v20120215.jar!/" />
       </CLASSES>
@@ -797,7 +834,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-security/8.1.1.v20120215/jetty-security-8.1.1.v20120215-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.eclipse.jetty:jetty-server:8.1.1.v20120215">
+    <library name="Maven: org.eclipse.jetty:jetty-server:8.1.1.v20120215" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.eclipse.jetty" artifactId="jetty-server" version="8.1.1.v20120215" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-server/8.1.1.v20120215/jetty-server-8.1.1.v20120215.jar!/" />
       </CLASSES>
@@ -808,7 +846,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-server/8.1.1.v20120215/jetty-server-8.1.1.v20120215-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.eclipse.jetty:jetty-servlet:8.1.1.v20120215">
+    <library name="Maven: org.eclipse.jetty:jetty-servlet:8.1.1.v20120215" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.eclipse.jetty" artifactId="jetty-servlet" version="8.1.1.v20120215" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-servlet/8.1.1.v20120215/jetty-servlet-8.1.1.v20120215.jar!/" />
       </CLASSES>
@@ -819,7 +858,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-servlet/8.1.1.v20120215/jetty-servlet-8.1.1.v20120215-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.eclipse.jetty:jetty-util:8.1.1.v20120215">
+    <library name="Maven: org.eclipse.jetty:jetty-util:8.1.1.v20120215" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.eclipse.jetty" artifactId="jetty-util" version="8.1.1.v20120215" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-util/8.1.1.v20120215/jetty-util-8.1.1.v20120215.jar!/" />
       </CLASSES>
@@ -830,7 +870,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-util/8.1.1.v20120215/jetty-util-8.1.1.v20120215-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.eclipse.jetty:jetty-webapp:8.1.1.v20120215">
+    <library name="Maven: org.eclipse.jetty:jetty-webapp:8.1.1.v20120215" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.eclipse.jetty" artifactId="jetty-webapp" version="8.1.1.v20120215" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-webapp/8.1.1.v20120215/jetty-webapp-8.1.1.v20120215.jar!/" />
       </CLASSES>
@@ -841,7 +882,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-webapp/8.1.1.v20120215/jetty-webapp-8.1.1.v20120215-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.eclipse.jetty:jetty-xml:8.1.1.v20120215">
+    <library name="Maven: org.eclipse.jetty:jetty-xml:8.1.1.v20120215" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.eclipse.jetty" artifactId="jetty-xml" version="8.1.1.v20120215" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-xml/8.1.1.v20120215/jetty-xml-8.1.1.v20120215.jar!/" />
       </CLASSES>
@@ -852,7 +894,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-xml/8.1.1.v20120215/jetty-xml-8.1.1.v20120215-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.hamcrest:hamcrest-core:1.1">
+    <library name="Maven: org.hamcrest:hamcrest-core:1.1" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.hamcrest" artifactId="hamcrest-core" version="1.1" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar!/" />
       </CLASSES>
@@ -863,7 +906,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.hibernate.common:hibernate-commons-annotations:4.0.1.Final">
+    <library name="Maven: org.hibernate.common:hibernate-commons-annotations:4.0.1.Final" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.hibernate.common" artifactId="hibernate-commons-annotations" version="4.0.1.Final" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/common/hibernate-commons-annotations/4.0.1.Final/hibernate-commons-annotations-4.0.1.Final.jar!/" />
       </CLASSES>
@@ -874,7 +918,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/common/hibernate-commons-annotations/4.0.1.Final/hibernate-commons-annotations-4.0.1.Final-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final">
+    <library name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.hibernate.javax.persistence" artifactId="hibernate-jpa-2.0-api" version="1.0.1.Final" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar!/" />
       </CLASSES>
@@ -885,7 +930,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.hibernate:hibernate-core:4.0.1.Final">
+    <library name="Maven: org.hibernate:hibernate-core:4.0.1.Final" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.hibernate" artifactId="hibernate-core" version="4.0.1.Final" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.0.1.Final/hibernate-core-4.0.1.Final.jar!/" />
       </CLASSES>
@@ -896,7 +942,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.0.1.Final/hibernate-core-4.0.1.Final-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.hibernate:hibernate-entitymanager:4.0.1.Final">
+    <library name="Maven: org.hibernate:hibernate-entitymanager:4.0.1.Final" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.hibernate" artifactId="hibernate-entitymanager" version="4.0.1.Final" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/4.0.1.Final/hibernate-entitymanager-4.0.1.Final.jar!/" />
       </CLASSES>
@@ -907,7 +954,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/4.0.1.Final/hibernate-entitymanager-4.0.1.Final-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.hibernate:hibernate-validator:4.2.0.Final">
+    <library name="Maven: org.hibernate:hibernate-validator:4.2.0.Final" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.hibernate" artifactId="hibernate-validator" version="4.2.0.Final" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-validator/4.2.0.Final/hibernate-validator-4.2.0.Final.jar!/" />
       </CLASSES>
@@ -918,7 +966,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-validator/4.2.0.Final/hibernate-validator-4.2.0.Final-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.javassist:javassist:3.15.0-GA">
+    <library name="Maven: org.javassist:javassist:3.15.0-GA" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.javassist" artifactId="javassist" version="3.15.0-GA" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar!/" />
       </CLASSES>
@@ -929,7 +978,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.jboss.logging:jboss-logging:3.1.0.CR2">
+    <library name="Maven: org.jboss.logging:jboss-logging:3.1.0.CR2" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.jboss.logging" artifactId="jboss-logging" version="3.1.0.CR2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.1.0.CR2/jboss-logging-3.1.0.CR2.jar!/" />
       </CLASSES>
@@ -940,7 +990,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.1.0.CR2/jboss-logging-3.1.0.CR2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec:1.0.0.Final">
+    <library name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec:1.0.0.Final" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.jboss.spec.javax.transaction" artifactId="jboss-transaction-api_1.1_spec" version="1.0.0.Final" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jboss-transaction-api_1.1_spec-1.0.0.Final.jar!/" />
       </CLASSES>
@@ -951,7 +1002,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jboss-transaction-api_1.1_spec-1.0.0.Final-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.liquibase:liquibase-core:2.0.3">
+    <library name="Maven: org.liquibase:liquibase-core:2.0.3" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.liquibase" artifactId="liquibase-core" version="2.0.3" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/liquibase/liquibase-core/2.0.3/liquibase-core-2.0.3.jar!/" />
       </CLASSES>
@@ -962,7 +1014,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/liquibase/liquibase-core/2.0.3/liquibase-core-2.0.3-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.mortbay.jetty:jsp-2.1-glassfish:2.1.v20100127">
+    <library name="Maven: org.mortbay.jetty:jsp-2.1-glassfish:2.1.v20100127" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.mortbay.jetty" artifactId="jsp-2.1-glassfish" version="2.1.v20100127" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/mortbay/jetty/jsp-2.1-glassfish/2.1.v20100127/jsp-2.1-glassfish-2.1.v20100127.jar!/" />
       </CLASSES>
@@ -973,7 +1026,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/mortbay/jetty/jsp-2.1-glassfish/2.1.v20100127/jsp-2.1-glassfish-2.1.v20100127-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.mortbay.jetty:jsp-api-2.1-glassfish:2.1.v20100127">
+    <library name="Maven: org.mortbay.jetty:jsp-api-2.1-glassfish:2.1.v20100127" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.mortbay.jetty" artifactId="jsp-api-2.1-glassfish" version="2.1.v20100127" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/mortbay/jetty/jsp-api-2.1-glassfish/2.1.v20100127/jsp-api-2.1-glassfish-2.1.v20100127.jar!/" />
       </CLASSES>
@@ -984,7 +1038,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/mortbay/jetty/jsp-api-2.1-glassfish/2.1.v20100127/jsp-api-2.1-glassfish-2.1.v20100127-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.mortbay.jetty:jsp-api-2.1:7.0.0pre2">
+    <library name="Maven: org.mortbay.jetty:jsp-api-2.1:7.0.0pre2" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.mortbay.jetty" artifactId="jsp-api-2.1" version="7.0.0pre2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/mortbay/jetty/jsp-api-2.1/7.0.0pre2/jsp-api-2.1-7.0.0pre2.jar!/" />
       </CLASSES>
@@ -995,7 +1050,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/mortbay/jetty/jsp-api-2.1/7.0.0pre2/jsp-api-2.1-7.0.0pre2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.mortbay.jetty:servlet-api-3.0:7.0.0pre2">
+    <library name="Maven: org.mortbay.jetty:servlet-api-3.0:7.0.0pre2" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.mortbay.jetty" artifactId="servlet-api-3.0" version="7.0.0pre2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/mortbay/jetty/servlet-api-3.0/7.0.0pre2/servlet-api-3.0-7.0.0pre2.jar!/" />
       </CLASSES>
@@ -1006,7 +1062,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/mortbay/jetty/servlet-api-3.0/7.0.0pre2/servlet-api-3.0-7.0.0pre2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.slf4j:jcl-over-slf4j:1.6.1">
+    <library name="Maven: org.slf4j:jcl-over-slf4j:1.6.1" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.slf4j" artifactId="jcl-over-slf4j" version="1.6.1" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/jcl-over-slf4j/1.6.1/jcl-over-slf4j-1.6.1.jar!/" />
       </CLASSES>
@@ -1017,7 +1074,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/jcl-over-slf4j/1.6.1/jcl-over-slf4j-1.6.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.slf4j:slf4j-api:1.6.3">
+    <library name="Maven: org.slf4j:slf4j-api:1.6.3" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.slf4j" artifactId="slf4j-api" version="1.6.3" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.6.3/slf4j-api-1.6.3.jar!/" />
       </CLASSES>
@@ -1028,7 +1086,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.6.3/slf4j-api-1.6.3-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.slf4j:slf4j-log4j12:1.6.3">
+    <library name="Maven: org.slf4j:slf4j-log4j12:1.6.3" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.slf4j" artifactId="slf4j-log4j12" version="1.6.3" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-log4j12/1.6.3/slf4j-log4j12-1.6.3.jar!/" />
       </CLASSES>
@@ -1039,7 +1098,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-log4j12/1.6.3/slf4j-log4j12-1.6.3-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework.data:spring-data-commons-core:1.4.0.RELEASE">
+    <library name="Maven: org.springframework.data:spring-data-commons-core:1.4.0.RELEASE" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.springframework.data" artifactId="spring-data-commons-core" version="1.4.0.RELEASE" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons-core/1.4.0.RELEASE/spring-data-commons-core-1.4.0.RELEASE.jar!/" />
       </CLASSES>
@@ -1050,7 +1110,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons-core/1.4.0.RELEASE/spring-data-commons-core-1.4.0.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework.data:spring-data-jpa:1.2.0.RELEASE">
+    <library name="Maven: org.springframework.data:spring-data-jpa:1.2.0.RELEASE" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.springframework.data" artifactId="spring-data-jpa" version="1.2.0.RELEASE" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.2.0.RELEASE/spring-data-jpa-1.2.0.RELEASE.jar!/" />
       </CLASSES>
@@ -1061,7 +1122,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.2.0.RELEASE/spring-data-jpa-1.2.0.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework:spring-aop:3.2.3.RELEASE">
+    <library name="Maven: org.springframework:spring-aop:3.2.3.RELEASE" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.springframework" artifactId="spring-aop" version="3.2.3.RELEASE" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.2.3.RELEASE/spring-aop-3.2.3.RELEASE.jar!/" />
       </CLASSES>
@@ -1072,7 +1134,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.2.3.RELEASE/spring-aop-3.2.3.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework:spring-beans:3.2.3.RELEASE">
+    <library name="Maven: org.springframework:spring-beans:3.2.3.RELEASE" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.springframework" artifactId="spring-beans" version="3.2.3.RELEASE" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.2.3.RELEASE/spring-beans-3.2.3.RELEASE.jar!/" />
       </CLASSES>
@@ -1083,7 +1146,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.2.3.RELEASE/spring-beans-3.2.3.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework:spring-context:3.2.3.RELEASE">
+    <library name="Maven: org.springframework:spring-context:3.2.3.RELEASE" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.springframework" artifactId="spring-context" version="3.2.3.RELEASE" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/3.2.3.RELEASE/spring-context-3.2.3.RELEASE.jar!/" />
       </CLASSES>
@@ -1094,7 +1158,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/3.2.3.RELEASE/spring-context-3.2.3.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework:spring-core:3.2.3.RELEASE">
+    <library name="Maven: org.springframework:spring-core:3.2.3.RELEASE" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.springframework" artifactId="spring-core" version="3.2.3.RELEASE" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/3.2.3.RELEASE/spring-core-3.2.3.RELEASE.jar!/" />
       </CLASSES>
@@ -1105,7 +1170,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/3.2.3.RELEASE/spring-core-3.2.3.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework:spring-expression:3.2.3.RELEASE">
+    <library name="Maven: org.springframework:spring-expression:3.2.3.RELEASE" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.springframework" artifactId="spring-expression" version="3.2.3.RELEASE" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/3.2.3.RELEASE/spring-expression-3.2.3.RELEASE.jar!/" />
       </CLASSES>
@@ -1116,7 +1182,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/3.2.3.RELEASE/spring-expression-3.2.3.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework:spring-jdbc:3.2.3.RELEASE">
+    <library name="Maven: org.springframework:spring-jdbc:3.2.3.RELEASE" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.springframework" artifactId="spring-jdbc" version="3.2.3.RELEASE" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/3.2.3.RELEASE/spring-jdbc-3.2.3.RELEASE.jar!/" />
       </CLASSES>
@@ -1127,7 +1194,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/3.2.3.RELEASE/spring-jdbc-3.2.3.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework:spring-orm:3.2.3.RELEASE">
+    <library name="Maven: org.springframework:spring-orm:3.2.3.RELEASE" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.springframework" artifactId="spring-orm" version="3.2.3.RELEASE" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/3.2.3.RELEASE/spring-orm-3.2.3.RELEASE.jar!/" />
       </CLASSES>
@@ -1138,7 +1206,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/3.2.3.RELEASE/spring-orm-3.2.3.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework:spring-test:3.2.3.RELEASE">
+    <library name="Maven: org.springframework:spring-test:3.2.3.RELEASE" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.springframework" artifactId="spring-test" version="3.2.3.RELEASE" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/3.2.3.RELEASE/spring-test-3.2.3.RELEASE.jar!/" />
       </CLASSES>
@@ -1149,7 +1218,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/3.2.3.RELEASE/spring-test-3.2.3.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework:spring-tx:3.2.3.RELEASE">
+    <library name="Maven: org.springframework:spring-tx:3.2.3.RELEASE" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.springframework" artifactId="spring-tx" version="3.2.3.RELEASE" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.2.3.RELEASE/spring-tx-3.2.3.RELEASE.jar!/" />
       </CLASSES>
@@ -1160,7 +1230,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.2.3.RELEASE/spring-tx-3.2.3.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework:spring-web:3.2.3.RELEASE">
+    <library name="Maven: org.springframework:spring-web:3.2.3.RELEASE" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.springframework" artifactId="spring-web" version="3.2.3.RELEASE" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.2.3.RELEASE/spring-web-3.2.3.RELEASE.jar!/" />
       </CLASSES>
@@ -1171,7 +1242,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.2.3.RELEASE/spring-web-3.2.3.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework:spring-webmvc:3.2.3.RELEASE">
+    <library name="Maven: org.springframework:spring-webmvc:3.2.3.RELEASE" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.springframework" artifactId="spring-webmvc" version="3.2.3.RELEASE" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.2.3.RELEASE/spring-webmvc-3.2.3.RELEASE.jar!/" />
       </CLASSES>
@@ -1182,7 +1254,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.2.3.RELEASE/spring-webmvc-3.2.3.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: taglibs:standard:1.1.2">
+    <library name="Maven: taglibs:standard:1.1.2" type="java-imported" external-system-id="Maven">
+      <properties groupId="taglibs" artifactId="standard" version="1.1.2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/taglibs/standard/1.1.2/standard-1.1.2.jar!/" />
       </CLASSES>
@@ -1193,7 +1266,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/taglibs/standard/1.1.2/standard-1.1.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: xerces:xercesImpl:2.6.2">
+    <library name="Maven: xerces:xercesImpl:2.6.2" type="java-imported" external-system-id="Maven">
+      <properties groupId="xerces" artifactId="xercesImpl" version="2.6.2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/xerces/xercesImpl/2.6.2/xercesImpl-2.6.2.jar!/" />
       </CLASSES>
@@ -1204,7 +1278,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/xerces/xercesImpl/2.6.2/xercesImpl-2.6.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: xerces:xmlParserAPIs:2.6.2">
+    <library name="Maven: xerces:xmlParserAPIs:2.6.2" type="java-imported" external-system-id="Maven">
+      <properties groupId="xerces" artifactId="xmlParserAPIs" version="2.6.2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar!/" />
       </CLASSES>
@@ -1215,7 +1290,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: xml-apis:xml-apis:1.0.b2">
+    <library name="Maven: xml-apis:xml-apis:1.0.b2" type="java-imported" external-system-id="Maven">
+      <properties groupId="xml-apis" artifactId="xml-apis" version="1.0.b2" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar!/" />
       </CLASSES>
