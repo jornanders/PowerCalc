@@ -8,12 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9a789c5-6940-4a6b-a979-4d731fdee0ad" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/domain/domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/domain/domain.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/src/test/java/no/jascorp/powercalc/domain/regning/TestAvregning.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/no/jascorp/powercalc/domain/regning/TestAvregning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powercalculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/powercalculator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powercalculator.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/powercalculator.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powercalculator.iws" beforeDir="false" afterPath="$PROJECT_DIR$/powercalculator.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,9 +295,9 @@
     <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
     <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
@@ -543,6 +539,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -550,7 +547,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.TestAvregning.testAvregningOktober2023">
+  <component name="RunManager" selected="JUnit.TestAvregning.testAvregningNovember2023">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -910,7 +907,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningJuli2023" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningDesember2023" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -920,7 +917,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningJuli2023" />
+      <option name="METHOD_NAME" value="testAvregningDesember2023" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -931,7 +928,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningJuni2023" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningNovember2023" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -941,7 +938,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningJuni2023" />
+      <option name="METHOD_NAME" value="testAvregningNovember2023" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1031,19 +1028,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="JUnit.TestAvregning.testAvregningDesember2023" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningNovember2023" />
       <item itemvalue="JUnit.TestAvregning.testAvregningAugust2023" />
-      <item itemvalue="JUnit.TestAvregning.testAvregningJuli2023" />
-      <item itemvalue="JUnit.TestAvregning.testAvregningJuni2023" />
       <item itemvalue="JUnit.TestAvregning.testAvregningOktober2023" />
       <item itemvalue="JUnit.TestAvregning.testAvregningSeptember2023" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestAvregning.testAvregningNovember2023" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningDesember2023" />
         <item itemvalue="JUnit.TestAvregning.testAvregningOktober2023" />
         <item itemvalue="JUnit.TestAvregning.testAvregningSeptember2023" />
         <item itemvalue="JUnit.TestAvregning.testAvregningAugust2023" />
-        <item itemvalue="JUnit.TestAvregning.testAvregningJuli2023" />
-        <item itemvalue="JUnit.TestAvregning.testAvregningJuni2023" />
       </list>
     </recent_temporary>
   </component>
@@ -1098,7 +1095,8 @@
       <workItem from="1653918501901" duration="3768000" />
       <workItem from="1664702411169" duration="574000" />
       <workItem from="1686062969837" duration="2235000" />
-      <workItem from="1699801222829" duration="4755000" />
+      <workItem from="1699801222829" duration="4927000" />
+      <workItem from="1705857733318" duration="1168000" />
     </task>
     <servers />
   </component>

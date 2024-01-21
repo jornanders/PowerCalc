@@ -112,7 +112,9 @@ public class TestAvregning {
                 Maaleavlesning.forHybel().dato("15.08.2023").stand(98298).build(),
                 Maaleavlesning.forHybel().dato("02.09.2023").stand(98436).build(),
                 Maaleavlesning.forHybel().dato("03.10.2023").stand(98776).build(),
-                Maaleavlesning.forHybel().dato("04.11.2023").stand(99588).build()
+                Maaleavlesning.forHybel().dato("04.11.2023").stand(99588).build(),
+                Maaleavlesning.forHybel().dato("11.12.2023").stand(101052).build(),
+                Maaleavlesning.forHybel().dato("06.01.2024").stand(102263).build()
         );
     }
 
@@ -278,9 +280,33 @@ public class TestAvregning {
                 //vibb
                 Maaleavlesning.forHoved().dato("01.09.2023").forbruk(427).build(),
                 Maaleavlesning.forHoved().dato("01.10.2023").forbruk(2293).build(),
-                Maaleavlesning.forHoved().dato("01.11.2023").forbruk(3558).build()
+                Maaleavlesning.forHoved().dato("01.11.2023").forbruk(3558).build(),
+                Maaleavlesning.forHoved().dato("01.12.2023").forbruk(4502).build(),
+                Maaleavlesning.forHoved().dato("01.01.2024").forbruk(6159).build()
 
         );
+    }
+
+    @Test
+    public void testAvregningDesember2023() {
+        Avregning avregning = Regning
+                .fra("01.12.2023").til("01.01.2024")
+                .linje(fraGlitreStrøm().medSum(9283))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(2070.61, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 2070.61, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningNovember2023() {
+        Avregning avregning = Regning
+                .fra("01.11.2023").til("01.12.2023")
+                .linje(fraGlitreStrøm().medSum(7103))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(1805.65, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 1805.65, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
     }
 
     @Test
