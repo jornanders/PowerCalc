@@ -114,7 +114,11 @@ public class TestAvregning {
                 Maaleavlesning.forHybel().dato("03.10.2023").stand(98776).build(),
                 Maaleavlesning.forHybel().dato("04.11.2023").stand(99588).build(),
                 Maaleavlesning.forHybel().dato("11.12.2023").stand(101052).build(),
-                Maaleavlesning.forHybel().dato("06.01.2024").stand(102263).build()
+                Maaleavlesning.forHybel().dato("06.01.2024").stand(102263).build(),
+                Maaleavlesning.forHybel().dato("01.02.2024").stand(103500).build(),
+                Maaleavlesning.forHybel().dato("14.03.2024").stand(105044).build(),
+                Maaleavlesning.forHybel().dato("22.04.2024").stand(106170).build(),
+                Maaleavlesning.forHybel().dato("26.06.2024").stand(106983).build()
         );
     }
 
@@ -282,10 +286,82 @@ public class TestAvregning {
                 Maaleavlesning.forHoved().dato("01.10.2023").forbruk(2293).build(),
                 Maaleavlesning.forHoved().dato("01.11.2023").forbruk(3558).build(),
                 Maaleavlesning.forHoved().dato("01.12.2023").forbruk(4502).build(),
-                Maaleavlesning.forHoved().dato("01.01.2024").forbruk(6159).build()
+                Maaleavlesning.forHoved().dato("01.01.2024").forbruk(6159).build(),
+
+                Maaleavlesning.forHoved().dato("01.02.2024").forbruk(6357).build(),
+                Maaleavlesning.forHoved().dato("01.03.2024").forbruk(4485).build(),
+                Maaleavlesning.forHoved().dato("01.04.2024").forbruk(4008).build(),
+                Maaleavlesning.forHoved().dato("01.05.2024").forbruk(3351).build(),
+                Maaleavlesning.forHoved().dato("01.06.2024").forbruk(2388).build(),
+                Maaleavlesning.forHoved().dato("01.07.2024").forbruk(2053).build()
 
         );
     }
+    @Test
+    public void testAvregningJuni2024() {
+        Avregning avregning = Regning
+                .fra("01.06.2024").til("01.07.2024")
+                .linje(fraGlitreStrøm().medSum(2910))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(531.87, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 531.87, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+    @Test
+    public void testAvregningMai2024() {
+        Avregning avregning = Regning
+                .fra("01.05.2024").til("01.06.2024")
+                .linje(fraGlitreStrøm().medSum(3206))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(520.56, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 520.56, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+    @Test
+    public void testAvregningApril2024() {
+        Avregning avregning = Regning
+                .fra("01.04.2024").til("01.05.2024")
+                .linje(fraGlitreStrøm().medSum(4944))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(1060.62, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 1060.62, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+    @Test
+    public void testAvregningMars2024() {
+        Avregning avregning = Regning
+                .fra("01.03.2024").til("01.04.2024")
+                .linje(fraGlitreStrøm().medSum(5763))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(1434.42, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 1434.42, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+    @Test
+    public void testAvregningFebruar2024() {
+        Avregning avregning = Regning
+                .fra("01.02.2024").til("01.03.2024")
+                .linje(fraGlitreStrøm().medSum(6542))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(1555.05, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 1555.05, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+    @Test
+    public void testAvregningJanuar2024() {
+        Avregning avregning = Regning
+                .fra("01.01.2024").til("01.02.2024")
+                .linje(fraGlitreStrøm().medSum(9425))
+                .medAvlesninger(maaleavlesninger);
+
+        assertEquals(2179.28, avregning.beregnSum(Maalepunkt.HYBELMAALER), .01);
+        assertEquals(avregning.getRegning().getSum() - 2179.28, avregning.beregnSum(Maalepunkt.HOVEDETASJE), .01);
+    }
+
+
+
+
 
     @Test
     public void testAvregningDesember2023() {

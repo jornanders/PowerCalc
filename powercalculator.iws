@@ -536,18 +536,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "75abf728c111fa09bd7406bcce5bf8f1",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;75abf728c111fa09bd7406bcce5bf8f1&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.TestAvregning.testAvregningNovember2023">
+}</component>
+  <component name="RunManager" selected="JUnit.TestAvregning.testAvregningJuni2024">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -886,7 +886,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningAugust2023" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningApril2024" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -896,7 +896,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningAugust2023" />
+      <option name="METHOD_NAME" value="testAvregningApril2024" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -907,7 +907,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningDesember2023" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningFebruar2024" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -917,7 +917,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningDesember2023" />
+      <option name="METHOD_NAME" value="testAvregningFebruar2024" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -928,7 +928,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningNovember2023" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningJuni2024" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -938,7 +938,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningNovember2023" />
+      <option name="METHOD_NAME" value="testAvregningJuni2024" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -949,7 +949,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningOktober2023" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningMai2024" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -959,7 +959,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningOktober2023" />
+      <option name="METHOD_NAME" value="testAvregningMai2024" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -970,7 +970,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningSeptember2023" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningMars2024" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -980,7 +980,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningSeptember2023" />
+      <option name="METHOD_NAME" value="testAvregningMars2024" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1028,19 +1028,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestAvregning.testAvregningDesember2023" />
-      <item itemvalue="JUnit.TestAvregning.testAvregningNovember2023" />
-      <item itemvalue="JUnit.TestAvregning.testAvregningAugust2023" />
-      <item itemvalue="JUnit.TestAvregning.testAvregningOktober2023" />
-      <item itemvalue="JUnit.TestAvregning.testAvregningSeptember2023" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningApril2024" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningFebruar2024" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningJuni2024" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningMai2024" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningMars2024" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestAvregning.testAvregningNovember2023" />
-        <item itemvalue="JUnit.TestAvregning.testAvregningDesember2023" />
-        <item itemvalue="JUnit.TestAvregning.testAvregningOktober2023" />
-        <item itemvalue="JUnit.TestAvregning.testAvregningSeptember2023" />
-        <item itemvalue="JUnit.TestAvregning.testAvregningAugust2023" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningJuni2024" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningMai2024" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningApril2024" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningMars2024" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningFebruar2024" />
       </list>
     </recent_temporary>
   </component>
@@ -1096,7 +1096,8 @@
       <workItem from="1664702411169" duration="574000" />
       <workItem from="1686062969837" duration="2235000" />
       <workItem from="1699801222829" duration="4927000" />
-      <workItem from="1705857733318" duration="1168000" />
+      <workItem from="1705857733318" duration="1828000" />
+      <workItem from="1722454386320" duration="3984000" />
     </task>
     <servers />
   </component>
