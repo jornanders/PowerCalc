@@ -64,7 +64,7 @@ public class Maaleavlesning implements Comparable<Maaleavlesning>, Serializable 
 	@Min(0)
 	private final int forbruk;
 
-	Maaleavlesning() {
+	public Maaleavlesning() {
 		this.punkt = null;
 		this.dato = null;
 		this.stand = 0;

@@ -8,7 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9a789c5-6940-4a6b-a979-4d731fdee0ad" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/no/jascorp/powercalc/domain/maaleavlesning/Maaleavlesning.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/no/jascorp/powercalc/domain/maaleavlesning/Maaleavlesning.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/src/test/java/no/jascorp/powercalc/domain/regning/TestAvregning.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/no/jascorp/powercalc/domain/regning/TestAvregning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powercalculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/powercalculator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powercalculator.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/powercalculator.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powercalculator.iws" beforeDir="false" afterPath="$PROJECT_DIR$/powercalculator.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,6 +230,9 @@
     <option name="SHOW_PACKAGES" value="false" />
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="SORT_ALPHABETICALLY" value="false" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/3.2.3.RELEASE/spring-context-3.2.3.RELEASE.jar!/org/springframework/context/support/PropertySourcesPlaceholderConfigurer.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -536,18 +542,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;75abf728c111fa09bd7406bcce5bf8f1&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.TestAvregning.executor": "Debug",
+    "JUnit.TestAvregning.testAvregningAugust2024.executor": "Run",
+    "JUnit.TestAvregning.testAvregningDesember2024.executor": "Run",
+    "JUnit.TestAvregning.testAvregningFebruar2025.executor": "Run",
+    "JUnit.TestAvregning.testAvregningJanuar2025.executor": "Run",
+    "JUnit.TestAvregning.testAvregningJuli2024.executor": "Run",
+    "JUnit.TestAvregning.testAvregningMars2025.executor": "Run",
+    "JUnit.TestAvregning.testAvregningNovember2024.executor": "Run",
+    "JUnit.TestAvregning.testAvregningOktober2024.executor": "Run",
+    "JUnit.TestAvregning.testAvregningSeptember2024.executor": "Run",
+    "JUnit.TestMaaleavlesning.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/jornanders/development/PowerCalc",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "75abf728c111fa09bd7406bcce5bf8f1",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.TestAvregning.testAvregningJuni2024">
+}]]></component>
+  <component name="RunManager" selected="JUnit.TestAvregning.testAvregningMars2025">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -637,6 +660,11 @@
     </configuration>
     <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
       <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -881,12 +909,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestAvregning.testAvregningApril2024" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningDesember2024" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -896,7 +919,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningApril2024" />
+      <option name="METHOD_NAME" value="testAvregningDesember2024" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -907,7 +930,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningFebruar2024" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningFebruar2025" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -917,7 +940,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningFebruar2024" />
+      <option name="METHOD_NAME" value="testAvregningFebruar2025" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -928,7 +951,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningJuni2024" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningJanuar2025" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -938,7 +961,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningJuni2024" />
+      <option name="METHOD_NAME" value="testAvregningJanuar2025" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -949,7 +972,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningMai2024" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningMars2025" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -959,7 +982,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningMai2024" />
+      <option name="METHOD_NAME" value="testAvregningMars2025" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -970,7 +993,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAvregning.testAvregningMars2024" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAvregning.testAvregningNovember2024" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -980,7 +1003,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.jascorp.powercalc.domain.regning" />
       <option name="MAIN_CLASS_NAME" value="no.jascorp.powercalc.domain.regning.TestAvregning" />
-      <option name="METHOD_NAME" value="testAvregningMars2024" />
+      <option name="METHOD_NAME" value="testAvregningNovember2024" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1028,19 +1051,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestAvregning.testAvregningApril2024" />
-      <item itemvalue="JUnit.TestAvregning.testAvregningFebruar2024" />
-      <item itemvalue="JUnit.TestAvregning.testAvregningJuni2024" />
-      <item itemvalue="JUnit.TestAvregning.testAvregningMai2024" />
-      <item itemvalue="JUnit.TestAvregning.testAvregningMars2024" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningDesember2024" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningFebruar2025" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningJanuar2025" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningMars2025" />
+      <item itemvalue="JUnit.TestAvregning.testAvregningNovember2024" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestAvregning.testAvregningJuni2024" />
-        <item itemvalue="JUnit.TestAvregning.testAvregningMai2024" />
-        <item itemvalue="JUnit.TestAvregning.testAvregningApril2024" />
-        <item itemvalue="JUnit.TestAvregning.testAvregningMars2024" />
-        <item itemvalue="JUnit.TestAvregning.testAvregningFebruar2024" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningMars2025" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningFebruar2025" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningJanuar2025" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningDesember2024" />
+        <item itemvalue="JUnit.TestAvregning.testAvregningNovember2024" />
       </list>
     </recent_temporary>
   </component>
@@ -1048,6 +1071,14 @@
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="StarteamConfiguration">
@@ -1098,6 +1129,10 @@
       <workItem from="1699801222829" duration="4927000" />
       <workItem from="1705857733318" duration="1828000" />
       <workItem from="1722454386320" duration="3984000" />
+      <workItem from="1746120991259" duration="356000" />
+      <workItem from="1746121356236" duration="746000" />
+      <workItem from="1746123167049" duration="1831000" />
+      <workItem from="1746164480864" duration="2686000" />
     </task>
     <servers />
   </component>
