@@ -15,7 +15,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>3.2.3.RELEASE</spring.version>
+		<spring.version>5.2.22.RELEASE</spring.version>
 		<jetty.version>8.1.1.v20120215</jetty.version>
 		<hibernate.version>4.0.1.Final</hibernate.version>
 		<hibernate-jpa.version>1.0.1.Final</hibernate-jpa.version>
